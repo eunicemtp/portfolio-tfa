@@ -1,10 +1,40 @@
+
+
 body {
-  font-family: sans-serif;
-  font-size: $size-text;
-  line-height: 1.5;
-  color: $c-text;
+  font-family: var(--font-family-primary);
+  color:var(--main-color);
+  font-size: var(--mobile-p-size);
+  letter-spacing: var(--mobile-p-letterspacing) ;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+}
+
+a, footer{
+
+  font-family: var(--font-family-title);
+  font-variation-settings: var(--font-family-a-variation);
+  color: var(--second-color);
+}
+
+h1{
+  font-size: var(--mobile-h1-size);
+  font-variation-settings: var(--font-family-h1-variation);
+
+}
+
+h2{
+  font-size: var(--mobile-h2-size);
+  font-variation-settings: var(--font-family-h2-variation)
 }
 
 .title {
-  color: $c-alt;
+  font-family: var(--font-family-title);
+  opacity: 50%;
+  padding: var(--mobile-title-spaceBetween);
+  margin: 0;
+  position: sticky;
+  top: 0;
 }
+
+

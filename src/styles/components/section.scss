@@ -1,0 +1,81 @@
+.acceuil{
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  
+    h1,p{
+        
+        margin:0;
+        text-align: center;
+    }
+    p{
+
+        white-space:nowrap;
+    }
+}
+
+.section{
+
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section__contact{
+
+    .reseaux{
+        // padding: 0px 0px 0px 20px;
+        list-style-type: none;
+        margin-top: 60px;
+        margin-bottom: 0;
+        // display: inline-block;
+        // width: 100%;
+
+        &__el{
+
+            width: 70%;
+            // display: flex;
+            // display: inline-block;
+            flex-direction: row-reverse;
+            align-items: center;
+
+            margin-bottom: 25%;
+        
+            a{
+                
+                display: flex;
+                // width: 100%;
+                align-items: center;
+                flex-direction: row-reverse;
+
+                span{
+
+                    width: 50%;
+                    
+                }
+                
+            }
+            svg {
+                // // margin-right: 50%;
+                // margin-bottom: 30%;
+                width: 35%;
+                fill: var(--second-color);
+                // margin-right: 30%;
+            }
+        }
+
+
+
+    }  
+    
+    .reseaux__el a > span {
+        margin-left: 15%;
+    }
+
+}
+
+

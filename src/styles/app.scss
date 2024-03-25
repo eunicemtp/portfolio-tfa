@@ -1,2 +1,23 @@
 @import 'utils/variables';
 @import 'components/type';
+@import 'components/background';
+@import 'components/section';
+@import 'components/footer';
+
+:root {
+
+    --main-color:#B1ACE5;
+    --second-color: #a27deb;
+    --mobile-h1-size:113px;
+    --mobile-h2-size:80px;
+    --mobile-h3-size:57px;
+    --mobile-p-size:20px;
+    --mobile-p-letterspacing:-5%;
+    --font-family-primary: "Sometype Mono", monospace;
+    --font-family-title: "silver-streak-variable", sans-serif;
+    --font-family-h1-variation:"wght" 535, "wdth" 100;
+    --font-family-h2-variation:"wght" 400, "wdth" 110;
+    --font-family-a-variation:"wght" 400, "wdth" 150;
+    --mobile-title-spaceBetween:60px 0 60px 0;
+  }
+  

@@ -1,21 +1,142 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PHP Project</title>
+  <title>{{ title }}</title>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="description" content="">
   <!-- Meta Partage -->
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contenu ajoute">
+
+ <!-- Instagram Card data -->
+ <meta name="Instagram:card" content="summary_large_image">
+ <meta name="Instagram:site" content="@karuiart_">
+ <meta name="Instagram:creator" content="@eunice_mtp">
+ <meta name="Instagram:title" content="Portfolio by Eunice Mutope">
+ <meta name="Instagram:description" content="Here my portfolio! You'll find all my projects, my resume and even more">
+ <!-- Instagram summary card with large image must be at least 280x150px -->
+ <meta name="Instagram:image" content="http://www.eunice-mutope-nkongolo.be/assets/images/karui_insta.png">
+
+ <!-- Behance Card data -->
+ <meta name="Behance:card" content="summary_large_image">
+ <meta name="Behance:site" content="eunicemutope">
+ <meta name="Behance:creator" content="eunicemutope">
+ <meta name="Behance:title" content="Portfolio by Eunice Mutope">
+ <meta name="Behance:description" content="Here my portfolio! You'll find all my projects, my resume and even more">
+ <!-- Behance summary card with large image must be at least 280x150px -->
+ <meta name="Behance:image" content="http://www.eunice-mutope-nkongolo.be/projets/helloworld/assets/images/karui_insta.png">
+
+ <!-- Pinterest Card data -->
+ <meta name="Pinterest:card" content="summary_large_image">
+ <meta name="Pinterest:site" content="@emutope">
+ <meta name="Pinterest:creator" content="@eunicemutope">
+ <meta name="Pinterest:title" content="Portfolio by Eunice Mutope">
+ <meta name="Pinterest:description" content="Here my portfolio! You'll find all my projects, my resume and even more">
+ <!-- Pinterest summary card with large image must be at least 280x150px -->
+ <meta name="Pinterest:image" content="http://www.eunice-mutope-nkongolo.be/projets/helloworld/assets/images/karui_insta.png">
+
+ <!-- Hello world data -->
+ <meta property="og:site_name" content="My portfolio - Eunice Mutope">
+ <meta property="og:title" content="Portfolio - Eunice Mutope DWT - HEAJ">
+ <meta property="og:description" content="Here my portfolio! You'll find all my projects, my resume and even more">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="http://www.eunice-mutope-nkongolo.be/">
+ <meta property="og:image" content="https://eunice-mutope-nkongolo.be/assets/images/avatar2.png">
+ <meta property="og:image:width" content="1800">
+ <meta property="og:image:height" content="945">
+
   <!-- Favicon -->
+  <link rel="icon" href="assets/images/avatar2.png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link rel="stylesheet" href="https://use.typekit.net/jts8cfb.css">
   <link rel="stylesheet" href="assets/styles/app.css">
-</head>
-<body>
-  <img src="assets/images/logo-heaj.png">
-  <h1>{{ title }}</h1>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.5/trianglify.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js'></script>
+  <script src="assets/scripts/app.js" defer></script>
+  <script src="assets/scripts/background.js" defer></script>
 
-  <script src="assets/scripts/app.js"></script>
+</head>
+<body >
+
+  <main>
+    <div id="bg"></div>
+    <section class="section section__acceuil">
+      <div class="acceuil">
+        <h1 class="title">Hello!</h1>
+        <p>I’m Eunice Mutope a web design student</p>
+      </div>
+    </section>
+    <section class="section section__works">
+    <div class="masque"><h2 class="title" id="title">Works</h2></div>
+      
+      <div id="content"  class="fade ">
+      {# {% include 'partials/projets.twig' %} #}
+      {% for key, item in projets_details %}
+        <div class="contenu">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <img src="{{ item.image }}" alt="{{ item.title }}">
+        </div>
+      {% endfor %}
+
+      
+      </div>
+      
+    </section>
+
+    <section class="section section__contact">
+      <h2 class="title">Contact</h2>
+      <ul class="reseaux">
+        <li class="reseaux reseaux__el">
+            <a href="https://www.instagram.com/karuiart_/"> <span class="hide">Instagram</span> 
+
+            <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"><path d="M12,0.5C5.7,0.5,0.5,5.7,0.5,12S5.7,23.5,12,23.5S23.5,18.3,23.5,12S18.3,0.5,12,0.5zM9.1,4h5.9c2.8,0,5,2.2,5,5v5.9c0,2.8-2.2,5-5,5H9.1c-2.8,0-5-2.2-5-5V9.1C4,6.3,6.3,4,9.1,4z M9.1,5.8c-1.8,0-3.2,1.5-3.2,3.2v5.9c0,1.8,1.5,3.2,3.2,3.2h5.9c1.8,0,3.2-1.5,3.2-3.2V9.1c0-1.8-1.5-3.2-3.2-3.2H9.1z M16.1,7.3c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6-0.3-0.6-0.6C15.5,7.5,15.8,7.3,16.1,7.3zM12,7.6c2.4,0,4.4,2,4.4,4.4s-2,4.4-4.4,4.4s-4.4-2-4.4-4.4S9.6,7.6,12,7.6zM12,9.3c-1.5,0-2.7,1.2-2.7,2.7s1.2,2.7,2.7,2.7s2.7-1.2,2.7-2.7S13.5,9.3,12,9.3z"/></svg>
+
+            </a>
+
+
+        </li>
+        <li class="reseaux reseaux__el">
+            <a href="https://www.pinterest.com/emutope/"> <span class="hide">Pinterest</span> 
+            <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"><path d="M12,0.5C5.7,0.5,0.5,5.7,0.5,12c0,4.9,3.1,9.2,7.5,10.8c-0.1-1.1-0.1-3,0.1-3.9c0.2-0.8,1.3-5.3,1.3-5.3S9.1,12.9,9.1,12c0-1.5,0.9-2.6,1.9-2.6c0.9,0,1.4,0.7,1.4,1.5c0,0.9-0.6,2.3-0.9,3.6c-0.3,1.1,0.5,1.9,1.6,1.9c1.9,0,3.4-2,3.4-4.9c0-2.6-1.8-4.4-4.5-4.4c-3.1,0-4.9,2.3-4.9,4.7c0,0.9,0.4,1.9,0.8,2.5C8,14.3,8,14.4,8,14.5c-0.1,0.3-0.3,1.1-0.3,1.2c0,0.2-0.2,0.2-0.4,0.1c-1.3-0.6-2.2-2.6-2.2-4.2c0-3.4,2.5-6.5,7.1-6.5c3.7,0,6.6,2.7,6.6,6.2c0,3.7-2.3,6.7-5.6,6.7c-1.1,0-2.1-0.6-2.5-1.2c0,0-0.5,2.1-0.7,2.6c-0.2,0.9-1.2,2.7-1.7,3.5c1.1,0.4,2.3,0.6,3.5,0.6c6.3,0,11.5-5.2,11.5-11.5C23.5,5.7,18.3,0.5,12,0.5z"/></svg>
+
+            </a>
+
+        </li>
+
+        <li class="reseaux reseaux__el">
+          <a href="mailto:eunicemtpro@gmail.com"><span class="hide">Mail</span>
+            <svg version="1.1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><path id="email" class="st0" d="M0.5,12C0.5,5.6,5.7,0.5,12,0.5S23.5,5.6,23.5,12S18.4,23.5,12,23.5S0.5,18.3,0.5,12z M3.2,15.6l6-4L3.7,7.4c0.2-0.3,0.3-0.6,0.5-0.8l7.8,5.8l7.8-5.8c0.2,0.3,0.4,0.6,0.5,0.8l-5.6,4.2l6,4c-0.1,0.3-0.3,0.6-0.4,0.9l-6.5-4.3L12,13.6l-1.9-1.4l-6.5,4.3C3.5,16.2,3.4,15.9,3.2,15.6L3.2,15.6z"/></svg>
+          </a>
+          
+          
+
+
+        </li>
+        <li class="reseaux reseaux__el">
+            <a href="https://www.pinterest.com/emutope/"><span class="hide">Phone</span>
+               <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve"><path d="M12,0.5C5.7,0.5,0.5,5.7,0.5,12S5.7,23.5,12,23.5S23.5,18.3,23.5,12S18.3,0.5,12,0.5z M18.6,16.7c0,0.8-0.7,1.4-1.5,1.2c-2-0.4-5.7-1.6-8.3-4.1C6.4,11.4,5.6,8,5.3,6.2C5.1,5.5,5.7,4.8,6.5,4.8h2.5l1,2.6l-0.5,2.8c0.7,1.7,1.8,2.8,3.7,3.7l2.8-0.6l2.6,1V16.7z"/></svg>
+            </a>
+            
+
+
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+      <small class="credits"><a href="index.html">Eunice Mutope</a> © 2024</small>
+  </footer> 
+
 </body>
 </html>
+

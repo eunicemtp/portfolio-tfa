@@ -10,3 +10,4 @@ function getTwigInstance() {
 
   return $twig;
 }
+

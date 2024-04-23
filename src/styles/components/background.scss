@@ -1,41 +1,61 @@
-html {
-    // height: auto;
+// html {
+//     // height: auto;
     
-    background: linear-gradient(white, #4e4e4e, white);
-    background-size: .1rem 400%;
-    animation: bg 8s infinite;
+//     background: linear-gradient(white, #4e4e4e, white);
+//     background-size: .1rem 400%;
+//     animation: bg 6s infinite;
 
-    // overflow: hidden;
+//     // overflow: hidden;
+// }
+  
+// body {
+//     // height: 100%;
+//     // width: 111%;
+//     // width: 100vw;
+//     background-size: cover;
+//     background-repeat: no-repeat; 
+//     margin: 0 auto;
+// }
+
+// @keyframes bg {
+//     0% {
+//         background-position: 0 0;
+//     }
+
+//     50% {
+//         background-position: 0 200%;
+//     }
+
+//     100% {
+//         background-position: 0 400%;
+//     }
+// }
+
+// @media screen and (min-width: 800px) {
+
+//     // body{
+
+//     //     // width: 110vw;
+//     // }
+    
+// }
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
   
-body {
-    // height: 100%;
-    // width: 111%;
-    // width: 100vw;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    margin: 0 auto;
-}
 
-@keyframes bg {
-    0% {
-        background-position: 0 0;
-    }
+$x_gradient: ( #311547, #220334 );
 
-    50% {
-        background-position: 0 200%;
-    }
+// Convertir les valeurs hexadécimales en couleurs Sass
+$color_1: nth($x_gradient, 1);
+$color_2: nth($x_gradient, 2);
 
-    100% {
-        background-position: 0 400%;
-    }
-}
-
-@media screen and (min-width: 800px) {
-
-    // body{
-
-    //     // width: 110vw;
-    // }
-    
+html {
+  background: radial-gradient(ellipse at center, $color_1 0%, darken($color_2, 5%) 100%);
+//   overflow: hidden;
 }

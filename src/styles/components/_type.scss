@@ -27,10 +27,14 @@ h2{
   font-size: var(--mobile-h2-size);
   font-variation-settings: var(--font-family-h2-variation)
 }
+h3{
+  font-size: var(--mobile-h3-size);
+  font-variation-settings: var(--font-family-h2-variation)
+}
 
 .title {
   font-family: var(--font-family-title);
-  opacity: 50%;
+  //opacity: 50%;
   padding: var(--mobile-title-spaceBetween);
   margin: 0;
   position: sticky;

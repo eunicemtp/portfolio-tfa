@@ -84,12 +84,17 @@
 
   
 
-    margin-bottom: 50%;
+    margin-bottom: 20%;
+    height: fit-content;
+    .title{
+
+        padding-bottom: 30px;
+    }
     
 
     img{
 
-        width: 10%;
+        width: 60%;
     }
 
     // #content {
@@ -101,12 +106,7 @@
     //     opacity: 0;
     // }
 
-    .fade {
-        transition: opacity 0.5s ease;
-    }
-    .fade.out {
-        opacity: 0;
-    }
+
 
     .masque {
         position: sticky;
@@ -128,7 +128,8 @@
       
     .contenu {
         /* Styles pour le contenu */
-        position: relative;
+        position: sticky;
+        top: 20%;
         z-index: -1; /* Assure que le contenu est au-dessus du masque */
         transition: opacity 0.3s ease;
     }

@@ -19,7 +19,7 @@ $projets_details = array(
   ),
   "Ilab" => array(
       "description" => "orange",
-      "title" => "$0.40",
+      "title" => "Ilab",
       "image" => "https://peach.blender.org/wp-content/uploads/poster_bunny_small.jpg"
   )
 );

@@ -76,12 +76,12 @@
     <section class="section section__works">
     <div class="masque"><h2 class="title" id="title">Works</h2></div>
       
-      <div id="content"  class="fade ">
+      <div id="content">
       {# {% include 'partials/projets.twig' %} #}
       {% for key, item in projets_details %}
         <div class="contenu">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.description }}</p>
+          {# <h3>{{ item.title }}</h3> #}
+          {# <p>{{ item.description }}</p> #}
           <img src="{{ item.image }}" alt="{{ item.title }}">
         </div>
       {% endfor %}

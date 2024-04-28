@@ -2,14 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener('DOMContentLoaded', function () {
-    var section = document.getElementById('section__works');
-    var sectionHeight = section.scrollHeight;
-    section.style.height = sectionHeight + 'px';
-});
-
-
-
 var contenus = document.querySelectorAll(".contenu");
 
 document.addEventListener("scroll", function() {

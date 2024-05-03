@@ -82,7 +82,9 @@
         <div class="contenu">
           {# <h3>{{ item.title }}</h3> #}
           {# <p>{{ item.description }}</p> #}
-          <img src="{{ item.image }}" alt="{{ item.title }}">
+          {% for image in item.images %}
+            <img src="{{ image }}" alt="{{ item.title }}">
+          {% endfor %}
         </div>
       {% endfor %}
 

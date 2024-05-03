@@ -92,10 +92,7 @@
     }
     
 
-    img{
-
-        width: 60%;
-    }
+ 
 
     // #content {
     //     opacity: 1;
@@ -128,10 +125,12 @@
       
     .contenu {
         /* Styles pour le contenu */
-        position: sticky;
+        // position: sticky;
         top: 20%;
         z-index: -1; /* Assure que le contenu est au-dessus du masque */
         transition: opacity 0.3s ease;
+        margin-bottom: 30%;
+        margin-top: 100px;
     }
       
 }

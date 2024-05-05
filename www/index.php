@@ -26,7 +26,7 @@ $projets_details = array(
       "description" => "orange",
       "title" => "Ilab",
       "images" => array(
-          "https://peach.blender.org/wp-content/uploads/poster_bunny_small.jpg"
+          "/assets/images/ilab_img.png"
       )
   )
 );

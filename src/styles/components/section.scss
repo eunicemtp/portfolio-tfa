@@ -90,20 +90,11 @@
 
         padding-bottom: 30px;
     }
-    
 
- 
-
-    // #content {
-    //     opacity: 1;
-    //     transition: opacity 0.5s ease;
-    // }
-      
-    // #title:hover ~ #content {
-    //     opacity: 0;
-    // }
-
-
+    h3{
+        text-align: center;
+        
+    }
 
     .masque {
         position: sticky;
@@ -125,12 +116,20 @@
       
     .contenu {
         /* Styles pour le contenu */
-        // position: sticky;
+        position: relative;
         top: 20%;
         z-index: -1; /* Assure que le contenu est au-dessus du masque */
         transition: opacity 0.3s ease;
         margin-bottom: 30%;
         margin-top: 100px;
+    }
+
+    .centered-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
       
 }

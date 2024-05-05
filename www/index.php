@@ -9,7 +9,7 @@ $template = $twig->load('index.twig');
 $projets_details = array(
   "Rux" => array(
       "description" => "This is the presentation of the redesign of our school playground ",
-      "title" => "Rethinking ux",
+      "title" => "Rux",
       "images" => array(
           "/assets/images/rux_haut2.png",
           "/assets/images/rux_bas2.png"

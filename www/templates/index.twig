@@ -76,16 +76,15 @@
     <section class="section section__works">
     <div class="masque"><h2 class="title" id="title">Works</h2></div>
       
-      <div id="content">
-      {# {% include 'partials/projets.twig' %} #}
+    {# <div id="content"> #}
       {% for key, item in projets_details %}
-        <div class="contenu ">
+      <div class="square">
+        <div class="contenu">
           {% if loop.first %}
             <h3 class="centered-title">{{ item.title }}</h3>
           {% else %}
             <h3>{{ item.title }}</h3>
           {% endif %}
-          {# <p>{{ item.description }}</p> #}
           {% for image in item.images %}
             {% if loop.index == 2 and key == "Rux" %}
               <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
@@ -93,10 +92,16 @@
               <img src="{{ image }}" alt="{{ item.title }}">
             {% endif %}
           {% endfor %}
+          <p class="description" style="display: none;">{{ item.description }}</p>
         </div>
-      {% endfor %}
-
       </div>
+      {% endfor %}
+    </div>
+
+    <div class="popup">
+      <div class="description-popup"></div>
+    </div>
+
       
     </section>
 

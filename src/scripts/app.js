@@ -1,6 +1,6 @@
 import { gsap } from "gsap"; 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import $ from "jquery";
+import $ from "jQuery";
 gsap.registerPlugin(ScrollTrigger);
 
 var contenus = document.querySelectorAll(".contenu");
@@ -27,6 +27,21 @@ document.addEventListener("scroll", function() {
     });
     
 });
+
+$(function() {
+    $('.square').on('click', function() {
+      var description = $(this).find('.description').text();
+      $('.description-popup').text(description);
+      $('.popup').show();
+    });
+  
+    $('.popup').on('click', function() {
+      $(this).hide();
+    });
+});
+  
+  
+  
 
 // $(document).ready(function() {
 //     $('.contenu').each(function() {

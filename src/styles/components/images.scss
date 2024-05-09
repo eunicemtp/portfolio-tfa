@@ -28,3 +28,21 @@
 
 }
   
+@media screen and (min-width: 1440px) {
+
+    .section__works {
+
+        img{
+    
+            width: 30%;
+            position: relative;
+            left: 35%;
+        }
+
+        .second-image {
+            position: absolute;
+            
+            top: 300px;
+        }
+    }
+}

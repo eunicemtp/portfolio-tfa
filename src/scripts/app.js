@@ -1,5 +1,6 @@
 import { gsap } from "gsap"; 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import $ from "jquery";
 gsap.registerPlugin(ScrollTrigger);
 
 var contenus = document.querySelectorAll(".contenu");
@@ -26,4 +27,17 @@ document.addEventListener("scroll", function() {
     });
     
 });
+
+// $(document).ready(function() {
+//     $('.contenu').each(function() {
+//       var contenuHeight = $(this).height(); // Hauteur du contenu
+//       var contenuWidth = $(this).width(); // Largeur du contenu
+      
+//       $(this).addClass('dynamic-height').css({
+//         'height': contenuHeight + 'px', // Définit la hauteur de .contenu à la hauteur de son contenu
+//         'width': contenuWidth + 'px' // Définit la largeur de .contenu à la largeur de son contenu
+//       });
+//     });
+//   });
+  
   

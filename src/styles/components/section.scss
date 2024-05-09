@@ -29,24 +29,29 @@
 
 .section__contact{
 
+    height: 90vh;
+
     .reseaux{
         // padding: 0px 0px 0px 20px;
         list-style-type: none;
-        margin-top: 60px;
+        // margin-top: 60px;
+        // margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 0;
         // display: inline-block;
         // width: 100%;
 
         &__el{
 
-            width: 70%;
+            // width: 70%;
             // display: flex;
             // display: inline-block;
-            flex-direction: row-reverse;
-            align-items: center;
+            // flex-direction: row-reverse;
+            // align-items: center;
 
-            margin-bottom: 25%;
-        
+            // margin-bottom: 25%;
+            width: 35%;
+            margin-bottom: 4%;
             a{
                 
                 display: flex;
@@ -73,6 +78,8 @@
 
 
     }  
+
+
     
     .reseaux__el a > span {
         margin-left: 15%;
@@ -122,6 +129,7 @@
         transition: opacity 0.3s ease;
         margin-bottom: 30%;
         margin-top: 100px;
+        height: fit-content;
     }
 
     .centered-title {
@@ -135,3 +143,74 @@
 }
 
 
+
+
+@media screen and (min-width: 700px) {
+
+
+    .section__contact .reseaux__el {
+
+        width: 25%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .section__contact .reseaux {
+
+        margin-top: 50px;
+
+    }
+
+    .section__contact .reseaux__el {
+
+        width: 15%;
+        // margin-bottom: 14%;
+
+    }
+
+    .grille{
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 400px); /* Crée 2 colonnes égales */
+        grid-template-rows: repeat(2, auto); /* Crée 2 lignes automatiques */
+        gap: 20px;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .section__contact .reseaux {
+
+        margin-top: 50px;
+
+    }
+
+    .section__contact .reseaux__el {
+
+        width: 65%;
+        margin-bottom: 4%;
+
+    }
+
+
+    .grille{
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 500px); /* Crée 2 colonnes égales */
+
+
+
+        
+    }
+
+}

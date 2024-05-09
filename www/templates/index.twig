@@ -79,7 +79,7 @@
       <div id="content">
       {# {% include 'partials/projets.twig' %} #}
       {% for key, item in projets_details %}
-        <div class="contenu">
+        <div class="contenu ">
           {% if loop.first %}
             <h3 class="centered-title">{{ item.title }}</h3>
           {% else %}
@@ -87,7 +87,11 @@
           {% endif %}
           {# <p>{{ item.description }}</p> #}
           {% for image in item.images %}
-            <img src="{{ image }}" alt="{{ item.title }}">
+            {% if loop.index == 2 and key == "Rux" %}
+              <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
+            {% else %}
+              <img src="{{ image }}" alt="{{ item.title }}">
+            {% endif %}
           {% endfor %}
         </div>
       {% endfor %}
@@ -99,6 +103,8 @@
     <section class="section section__contact">
       <h2 class="title">Contact</h2>
       <ul class="reseaux">
+      <div class="grille">
+      
         <li class="reseaux reseaux__el">
             <a href="https://www.instagram.com/karuiart_/"> <span class="hide">Instagram</span> 
 
@@ -133,6 +139,7 @@
 
 
         </li>
+        </div>
       </ul>
     </section>
 

@@ -38,8 +38,19 @@ h3{
   padding: var(--mobile-title-spaceBetween);
   margin: 0;
   position: sticky;
-  top: 0;
+
 }
+
+.section__works{
+
+  .title{
+
+    
+    top: 120px;
+  }
+}
+
+
 
 @media screen and (min-width: 1024px) {
 

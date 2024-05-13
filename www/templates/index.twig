@@ -81,9 +81,9 @@
       <div class="square">
         <div class="contenu">
           {% if loop.first %}
-            <h3 class="centered-title">{{ item.title }}</h3>
+            <h3 class="centered-title title--popup">{{ item.title }}</h3>
           {% else %}
-            <h3>{{ item.title }}</h3>
+            <h3 class="title--popup">{{ item.title }}</h3>
           {% endif %}
           {% for image in item.images %}
             {% if loop.index == 2 and key == "Rux" %}
@@ -92,6 +92,7 @@
               <img src="{{ image }}" alt="{{ item.title }}">
             {% endif %}
           {% endfor %}
+          {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
           <p class="description" style="display: none;">{{ item.description }}</p>
         </div>
       </div>
@@ -99,7 +100,9 @@
     </div>
 
     <div class="popup">
-      <div class="description-popup"></div>
+      <div class="blur"></div>
+      <h3 class="popup__title"></h3>
+      <p class="popup__description"></p>  
     </div>
 
       

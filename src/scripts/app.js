@@ -27,19 +27,26 @@ document.addEventListener("scroll", function() {
     });
     
 });
-
 $(function() {
     $('.square').on('click', function() {
       var description = $(this).find('.description').text();
-      $('.description-popup').text(description);
+      var title = $(this).find('.title--popup').text();
+      $('.popup__title').text(title);
+      $('.popup__description').text(description);
       $('.popup').show();
+      
+      // Ajouter une classe au corps pour figer le défilement
+      $('body').addClass('popup-open');
     });
   
     $('.popup').on('click', function() {
       $(this).hide();
+      
+      // Supprimer la classe du corps pour réactiver le défilement
+      $('body').removeClass('popup-open');
     });
 });
-  
+
   
   
 

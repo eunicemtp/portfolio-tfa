@@ -41,11 +41,11 @@
 // }
 
 #bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
   
 
@@ -58,4 +58,11 @@ $color_2: nth($x_gradient, 2);
 html {
   background: radial-gradient(ellipse at center, $color_1 0%, darken($color_2, 5%) 100%);
 //   overflow: hidden;
+}
+
+.popup-open {
+  overflow: hidden;
+  // position: fixed;
+  width: 100vw;
+  height: 100vh;
 }

@@ -73,25 +73,50 @@ $(function() {
       $(this).closest('.popup').hide(); // Masquer le popup en trouvant le conteneur parent
       $('body').removeClass('popup-open'); // Supprimer la classe du corps pour réactiver le défilement
     });
-
-    $('.popup__content').hide();
-    function toggleContent(targetId) {
-      var content = $('#' + targetId + '-content');
+    // var btn = document.querySelector(".popup__btn");
+    // $('.popup__content').hide();
+    // function toggleContent(targetId) {
+    //   var content = $('#' + targetId + '-content');
       
-      if (content.is(':visible')) {
-          content.hide(); // Masquer le contenu s'il est déjà visible
+    //   if (content.is(':visible')) {
+    //       content.hide(); // Masquer le contenu s'il est déjà visible
+    //       btn.removeClass('active-content'); // Retirer la classe si le contenu est masqué
           
-      } else {
-          $('.popup__content').hide(); // Masquer tous les autres contenus
-          content.show(); // Afficher le contenu ciblé
-      }
+    //   } else {
+    //       $('.popup__content').hide(); // Masquer tous les autres contenus
+    //       content.show(); // Afficher le contenu ciblé
+    //       btn.addClass('active-content'); // Ajouter la classe au bouton actuel
+    //   }
+    // }
+
+    // // Gérer les clics sur les boutons popup__btn
+    // $('.popup__btn').on('click', function() {
+    //   var targetId = $(this).data('target'); // Récupérer l'ID cible à partir de l'attribut data-target
+    //   toggleContent(targetId); // Basculer l'affichage du contenu correspondant
+    // });
+    $('.popup__content').hide(); // Masquer tous les contenus au chargement de la page
+
+    function toggleContent(targetId) {
+        var content = $('#' + targetId + '-content');
+        var btn = $('.popup__btn[data-target="' + targetId + '"]'); // Sélectionner le bouton associé
+        
+        if (content.is(':visible')) {
+            content.hide(); // Masquer le contenu s'il est déjà visible
+            btn.removeClass('active-content'); // Retirer la classe si le contenu est masqué
+        } else {
+            $('.popup__content').hide(); // Masquer tous les autres contenus
+            $('.popup__btn').removeClass('active-content');
+            content.show(); // Afficher le contenu ciblé
+            btn.addClass('active-content'); // Ajouter la classe au bouton actuel
+        }
     }
-    
+
     // Gérer les clics sur les boutons popup__btn
     $('.popup__btn').on('click', function() {
-      var targetId = $(this).data('target'); // Récupérer l'ID cible à partir de l'attribut data-target
-      toggleContent(targetId); // Basculer l'affichage du contenu correspondant
+        var targetId = $(this).data('target'); // Récupérer l'ID cible à partir de l'attribut data-target
+        toggleContent(targetId); // Basculer l'affichage du contenu correspondant
     });
+
 
 });
 

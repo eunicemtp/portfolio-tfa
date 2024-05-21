@@ -31,7 +31,10 @@ h3{
   font-size: var(--mobile-h3-size);
   font-variation-settings: var(--font-family-h2-variation)
 }
-
+h4{
+  font-size: var(--mobile-h4-size);
+  font-variation-settings: var(--font-family-h2-variation)
+}
 .title {
   font-family: var(--font-family-title);
   //opacity: 50%;

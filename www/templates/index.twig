@@ -74,38 +74,81 @@
       </div>
     </section>
     <section class="section section__works">
-    <div class="masque"><h2 class="title" id="title">Works</h2></div>
-      
-    {# <div id="content"> #}
-      {% for key, item in projets_details %}
-      <div class="square">
-        <div class="contenu">
-          {% if loop.first %}
-            <h3 class="centered-title title--popup">{{ item.title }}</h3>
-          {% else %}
-            <h3 class="title--popup">{{ item.title }}</h3>
-          {% endif %}
-          {% for image in item.images %}
-            {% if loop.index == 2 and key == "Rux" %}
-              <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
+      <div class="masque"><h2 class="title" id="title">Works</h2></div>
+        
+      {# <div id="content"> #}
+        {% for key, item in projets_details %}
+        <div class="square">
+          <div class="contenu">
+            {% if loop.first %}
+              <h3 class="centered-title title--popup">{{ item.title }}</h3>
             {% else %}
-              <img src="{{ image }}" alt="{{ item.title }}">
+              <h3 class="title--popup">{{ item.title }}</h3>
             {% endif %}
-          {% endfor %}
-          {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
-          <p class="description" style="display: none;">{{ item.description }}</p>
+            {% for image in item.images %}
+              {% if loop.index == 2 and key == "Rux" %}
+                <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
+              {% else %}
+                <img src="{{ image }}" alt="{{ item.title }}">
+              {% endif %}
+            {% endfor %}
+            {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
+            <p class="description" style="display: none;">{{ item.description }}</p>
+            <p class="info" style="display: none;">{{ item.info }}</p>
+            <p class="info2" style="display: none;">{{ item.info2 }}</p>
+            {% for image in item.design_images %}
+              <img class="design_img" style="display: none"; src="{{ image }}" alt="{{ item.title }}">
+            {% endfor %}
+          </div>
         </div>
+        {% endfor %}
+      {# </div> #}
+
+      <div class="popup">
+        <div class="blur">
+          <div class="popup__btn popup__btn--close">
+            <h5 class="first_title title">Close</h5>
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" viewBox="0 0 70 30" fill="none">
+              <path d="M0 15L25 29.4338V0.566243L0 15ZM381 12.5L22.5 12.5V17.5L381 17.5V12.5Z" fill="#B1ACE5"/>
+            </svg>
+          </div>
+          
+          <div class="fxed"> <h3 class="popup__title title"></h3>
+            <p class="popup__description"></p>
+            <p class="popup__info"></p>   
+          </div>
+
+          <div class="popup__btn popup__btn--diff" data-target="diff">
+            <h4 class="first_title title">Difficulties</h4>
+            <svg width="65" height="30" viewBox="0 0 65 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.566243 15L15 29.4338L29.4338 15L15 0.566243L0.566243 15ZM396 12.5L15 12.5V17.5L396 17.5V12.5Z" fill="#B1ACE5"/>
+            </svg>
+          </div>
+          <p class="popup__info popup__content second_info" id="diff-content"></p>
+          
+          <div class="popup__btn popup__btn--design" data-target="design">
+            <h4 class="popup__title--first title">Design</h4>
+            <svg width="65" height="30" viewBox="0 0 65 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.566243 15L15 29.4338L29.4338 15L15 0.566243L0.566243 15ZM396 12.5L15 12.5V17.5L396 17.5V12.5Z" fill="#B1ACE5"/>
+            </svg>
+          </div>
+          <p class="popup__info popup__content second_info" id="design-content"></p>
+
+          <div class="popup__btn popup__btn--adjust" data-target="adjust">
+            <h4 class="first_title title">Adjustments</h4>
+            <svg width="65" height="30" viewBox="0 0 65 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.566243 15L15 29.4338L29.4338 15L15 0.566243L0.566243 15ZM396 12.5L15 12.5V17.5L396 17.5V12.5Z" fill="#B1ACE5"/>
+            </svg>
+          </div>
+          <p class="popup__info popup__content second_info" id="adjust-content"></p>
+          
+        </div>
+        {# 
+        
+        <p class="popup__info second_info"></p>   #}
       </div>
-      {% endfor %}
-    </div>
 
-    <div class="popup">
-      <div class="blur"></div>
-      <h3 class="popup__title"></h3>
-      <p class="popup__description"></p>  
-    </div>
-
-      
+        
     </section>
 
     <section class="section section__contact">

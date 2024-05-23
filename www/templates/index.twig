@@ -76,33 +76,41 @@
     <section class="section section__works">
       <div class="masque"><h2 class="title" id="title">Works</h2></div>
         
-      {# <div id="content"> #}
-        {% for key, item in projets_details %}
-        <div class="square">
-          <div class="contenu">
-            {% if loop.first %}
-              <h3 class="centered-title title--popup">{{ item.title }}</h3>
-            {% else %}
-              <h3 class="title--popup">{{ item.title }}</h3>
-            {% endif %}
-            {% for image in item.images %}
-              {% if loop.index == 2 and key == "Rux" %}
-                <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
-              {% else %}
-                <img src="{{ image }}" alt="{{ item.title }}">
-              {% endif %}
-            {% endfor %}
-            {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
-            <p class="description" style="display: none;">{{ item.description }}</p>
-            <p class="info" style="display: none;">{{ item.info }}</p>
-            <p class="info2" style="display: none;">{{ item.info2 }}</p>
-            {% for image in item.design_images %}
-              <img class="design_img" style="display: none"; src="{{ image }}" alt="{{ item.title }}">
-            {% endfor %}
-          </div>
+      <div class="slider-container ">
+        <div class="slider fixed">
+          {% for key, item in projets_details %}
+            <div class="slider__el" data-gradient="gradient-bg-{{ loop.index }}">
+              <div class="square">
+                <div class="contenu">
+                  {% if loop.first %}
+                    <h3 class="centered-title title--popup">{{ item.title }}</h3>
+                  {% else %}
+                    <h3 class="title--popup">{{ item.title }}</h3>
+                  {% endif %}
+                  {% for image in item.images %}
+                    {% if loop.index == 2 and key == "Rux" %}
+                      <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
+                    {% else %}
+                      <img src="{{ image }}" alt="{{ item.title }}">
+                    {% endif %}
+                  {% endfor %}
+                  {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
+                  <p class="description" style="display: none;">{{ item.description }}</p>
+                  <p class="info" style="display: none;">{{ item.info }}</p>
+                  <p class="info2" style="display: none;">{{ item.info2 }}</p>
+                  <div class="design_images" style="display: none;">
+                    {% for image in item.design_images %}
+                      <div class="popup__slider__el"><img class="design_img" src="{{ image }}" alt="{{ item.title }}"></div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-      {# </div> #}
+        <button class="btn__prev">Prev</button>
+        <button class="btn__next">Next</button>
+      </div>
 
       <div class="popup">
         <div class="blur">
@@ -132,8 +140,13 @@
               <path d="M0.566243 15L15 29.4338L29.4338 15L15 0.566243L0.566243 15ZM396 12.5L15 12.5V17.5L396 17.5V12.5Z" fill="#B1ACE5"/>
             </svg>
           </div>
-          <p class="popup__info popup__content second_info" id="design-content"></p>
-
+          {# <p class="popup__info popup__content second_info" ></p> #}
+           {# <div class="popup__design--images" id="design-images" ></div> #}
+          
+            <div class="popup__slider-container popup__content" id="design-content">
+                <div class="popup__slider popup__design_images " id="design-images"></div>
+            </div>
+          
           <div class="popup__btn popup__btn--adjust" data-target="adjust">
             <h4 class="first_title title">Adjustments</h4>
             <svg width="65" height="30" viewBox="0 0 65 30" fill="none" xmlns="http://www.w3.org/2000/svg">

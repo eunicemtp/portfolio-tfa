@@ -11,7 +11,7 @@ $projets_details = array(
       "description" => "This is the presentation of the redesign of our school playground ",
       "info" => "At the request of the principal and teachers, we're going to help design the playground. 
                 It's not up to scratch yet, so we need to come up with ideas for its layout, including activities, 
-                furniture, etc.",
+                furniture,etc.",
         "info2" => "The difficulties here were not only coding or the design of the website it was to find the right ideas for
                  the redesign of the playground, I had a lot more to think about. When a chose an idea I had to be able to make a 
                  design for my website that reflected my ideas, that's tricky",
@@ -21,6 +21,9 @@ $projets_details = array(
           "/assets/images/rux_bas2.png"
       ),
       "design_images" => array(
+        "/assets/images/img_mobile-1.png",
+        "/assets/images/img_mobile-2.png",
+        "/assets/images/img_mobile-3.png",
         "/assets/images/img_mobile-1.png",
         "/assets/images/img_mobile-2.png",
         "/assets/images/img_mobile-3.png"

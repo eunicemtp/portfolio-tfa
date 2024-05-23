@@ -1,0 +1,101 @@
+@media screen and (max-width: 1023px) {
+    
+
+    .popup__slider {
+        display: flex;
+
+        overflow: scroll;
+        padding-right: 50px;     
+        margin-left: 5%;  
+
+    
+    
+        &__el {
+            flex: 1 0 50%;
+            // outline: 1px solid red;
+            width:fit-content;
+            margin-right:10%;
+            height: fit-content;
+            // flex-shrink: 0;
+
+            img{
+
+
+                width: 300px;
+
+                margin: 0;
+                left: 0;
+            }
+        }
+    }
+    
+}
+
+
+/////////////////////
+///SLIDER PROJECT///
+///////////////////
+@media screen and (min-width: 1024px) {
+    /* Basic slider styles */
+    .slider-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin: 0 auto;
+        left: -6%;
+        overflow: hidden;
+        border: 2px solid red;
+    }
+
+
+    
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;background: transparent;
+        // position: sticky;
+        // top: 30%;
+    }
+    
+    .slider__el {
+        min-width: 100%;
+        display: none; /* Hide all slides by default */
+        
+    }
+    
+    .slider__el--show {
+        display: block; /* Show only the active slide */
+    }
+    
+    .square {
+        width: 100%;
+    }
+    
+    .contenu {
+        /* Add styles for your content */
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    button.btn__prev,
+    button.btn__next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
+    button.btn__prev {
+        left: 10px;
+    }
+    
+    button.btn__next {
+        right: 10px;
+    }
+}

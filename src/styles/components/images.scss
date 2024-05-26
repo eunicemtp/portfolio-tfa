@@ -27,8 +27,7 @@
     }
 
 }
-  
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
 
     .section__works {
 
@@ -36,13 +35,34 @@
     
             width: 30%;
             position: relative;
-            left: 35%;
+            // left: 35%;
+            left: 0;
         }
 
         .second-image {
             position: absolute;
             
-            top: 300px;
+            top: 100%;
+        }
+    }
+
+
+}
+  
+@media screen and (min-width: 1440px) {
+
+    .section__works {
+
+        // img{
+    
+        //     width: 30%;
+        //     position: relative;
+        //     left: 35%;
+        // }
+
+        .second-image {
+            
+            top: 120%;
         }
     }
 }

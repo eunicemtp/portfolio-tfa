@@ -1,5 +1,10 @@
 @media screen and (max-width: 1023px) {
     
+    button.btn__prev,
+    button.btn__next, .description{
+
+        display: none;
+    }
 
     .popup__slider {
         display: flex;
@@ -39,11 +44,11 @@
     /* Basic slider styles */
     .slider-container {
         position: relative;
-        width: 100vw;
-        height: 100vh;
+        width: 60vw;
+        height: 80vh;
         margin: 0 auto;
-        left: -6%;
-        overflow: hidden;
+        // left: -6%;
+        // overflow: hidden;
         border: 2px solid red;
     }
 
@@ -52,15 +57,35 @@
     .slider {
         display: flex;
         transition: transform 0.5s ease;background: transparent;
-        // position: sticky;
-        // top: 30%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        // right: 30%;
+
+        .description{
+            display: block;
+            position: absolute;
+            right: 0;
+            // left: 80%;
+            width: 50%;
+            top: 60%;
+            height: fit-content;
+            transform: translateY(-50%);
+        }
+        
     }
     
     .slider__el {
         min-width: 100%;
         display: none; /* Hide all slides by default */
+        // position: relative; 
+        // top: 100px;
+        // top: 60%;
         
+        // transform: translateY(-50%);
     }
+        
+    
     
     .slider__el--show {
         display: block; /* Show only the active slide */
@@ -69,17 +94,88 @@
     .square {
         width: 100%;
     }
+    .section__works{
+
+        .contenu {
+
+            // margin-top: 0px;
+
+        }    
+        
+        // img {
+        //     // max-width: 100%;
+        //     width: 40%;
+        //     height: auto;
+        // }
+
+        .popup{
+
+            overflow: hidden;
+            height: 100vh;
+            
+        }
+
+        .popup__slider-container {
+
+            top: 0;
+            height: 100%; /* Prendre toute la hauteur de .popup */
+            width: 30%;
+            right: 15%;
+            overflow: hidden; 
+        }
+
+        .popup__slider {
+
+            display: flex;
+
+            flex-direction: column; /* Modifier la direction de défilement en colonne */
+            overflow-y: auto; /* Activer le défilement vertical */
+            overflow-x: hidden; /* Désactiver le défilement horizontal */
+            padding-bottom: 300px;  
+            padding-top: 50px;     
+            // margin-bottom: 15%;  
+            // height:450vh;
+            max-height: 100%; /* Prendre toute la hauteur de .popup__slider-container */
+            box-sizing: border-box; /* Assurer que padding est inclus dans la hauteur totale */
+
+
+
+            &__el {
+
+                // flex: 1 0 auto;
+                display: flex;
+                justify-content: end;
+                width:100%;
+                margin-bottom:10%;
+                box-sizing: border-box;
+                // height: fit-content;
+
+                
     
-    .contenu {
-        /* Add styles for your content */
+                img{
+                    width: 70%;
+                    // right: 35%;
+                    left: 0;
+                }
+            }
+        }
+
+        .popup__info{
+
+            width: 50%;
+        }
+
+        
     }
+
+
     
-    img {
-        max-width: 100%;
-    }
+    
+
     
     button.btn__prev,
     button.btn__next {
+        display: block;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -88,7 +184,7 @@
         border: none;
         padding: 10px;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 10;
     }
     
     button.btn__prev {
@@ -98,4 +194,37 @@
     button.btn__next {
         right: 10px;
     }
+
+
+
+
+}
+
+@media screen and (min-width:1440px){
+
+    .section__works{
+
+        .contenu {
+
+            // margin-top: 100px;
+
+        }
+        img {
+            // max-width: 100%;
+            // width: 10%;
+        }
+    }
+
+    .slider{
+
+        top: 0%;
+        transform: translateY(-0%);
+    }
+
+    .slider__el{
+
+        position: relative;
+        top: -100px;
+    }
+    
 }

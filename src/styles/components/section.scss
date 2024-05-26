@@ -26,6 +26,7 @@
     margin: 0 auto;
     position: relative;
     top: 0;
+    outline: 2px solid blue;
 }
 
 .section__contact{
@@ -352,15 +353,68 @@
 
     .section__works{
 
+        height: 100vh;
+
         .popup{
+            // position: sticky;
+            // top: 0;
+            
 
             .popup__description {
 
                 
                 // white-space:nowrap ;
+                
             }
+
+            &__btn svg{
+
+                display: none;
+            }
+
+            &__slider__el img{
+
+                width: 40%;
+                right: 20%;
+            }
+
+            &__content{
+
+                // float: right;
+                width: 45%;
+                position: absolute;
+                top: 35%;
+                right: 5%;
+                
+
+
+            }
+
+
+
+
+
         }
+
+
+        .centered-title {
+            // position: absolute;
+            top: 100%;
+            left: 15%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            // margin: 0;
+        }
+
+        h3{
+            text-align: left;
+            margin-left: 8%;
+            
+        }
+
     }
+
+
 
 }
 
@@ -387,8 +441,8 @@
         .centered-title {
             position: absolute;
             top: 110%;
-            left:50%;
-            // transform: translate(-50%, -50%);
+            left:10%;
+            transform: translate(-10%, -50%);
             // margin: 0;
         }
 
@@ -400,7 +454,7 @@
             .second_info{
 
 
-                width: 55%;
+                width: 35%;
             }
             .popup__description {
 

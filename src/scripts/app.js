@@ -284,7 +284,7 @@ $(function() {
 ////////////////////
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
+
     let prevButton = document.querySelector('.btn__prev');
     let nextButton = document.querySelector('.btn__next');
     let slides = document.querySelectorAll('.slider__el');
@@ -376,4 +376,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     setupTimeout();
-});
+

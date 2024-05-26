@@ -26,6 +26,9 @@ $projets_details = array(
         "/assets/images/img_mobile-3.png",
         "/assets/images/img_mobile-1.png",
         "/assets/images/img_mobile-2.png",
+        "/assets/images/img_mobile-3.png",
+        "/assets/images/img_mobile-1.png",
+        "/assets/images/img_mobile-2.png",
         "/assets/images/img_mobile-3.png"
     )
 

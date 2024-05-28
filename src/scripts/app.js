@@ -85,23 +85,47 @@ if (mediaQuery.matches) {
 
 // })
 $(function() {
-    $('.square').on('click', function() {
-      var description = $(this).find('.description').text();
-      var title = $(this).find('.title--popup').text();
-      var info = $(this).find('.info').text();
-      var info2 = $(this).find('.info2').text();
-      var designImages = $(this).find('.design_images').html();
-      $('.popup__title').text(title);
-      $('.popup__description').text(description);
-      $('.popup__info').text(info);
-      $('.second_info').text(info2);
-      $('#design-images').html(''); // Clear previous images
-      $('#design-images').html(designImages);
-      $('.popup').show();
+    // $('.square').on('click', function() {
+    //   var description = $(this).find('.description').text();
+    //   var title = $(this).find('.title--popup').text();
+    //   var info = $(this).find('.info').text();
+    //   var info2 = $(this).find('.info2').text();
+    //   var designImages = $(this).find('.design_images').html();
+    //   var designImages = $(this).find('.design_images2').html();
+    //   $('.popup__title').text(title);
+    //   $('.popup__description').text(description);
+    //   $('.popup__info').text(info);
+    //   $('.second_info').text(info2);
+    //   $('#design-images').html(''); // Clear previous images
+    //   $('#design-images').html(designImages);
+    //   $('#design-images2').html(designImages);
+    //   $('.popup').show();
       
-      // Ajouter une classe au corps pour figer le défilement
-      $('body').addClass('popup-open');
+    //   // Ajouter une classe au corps pour figer le défilement
+    //   $('body').addClass('popup-open');
+    // });
+
+    $('.square').on('click', function() {
+        var description = $(this).find('.description').text();
+        var title = $(this).find('.title--popup').text();
+        var info = $(this).find('.info').text();
+        var info2 = $(this).find('.info2').text();
+        var designImages = $(this).find('.design_images').html();
+        var adjustImages = $(this).find('.adjust_images').html();
+        $('.popup__title').text(title);
+        $('.popup__description').text(description);
+        $('.popup__info').text(info);
+        $('.second_info').text(info2);
+        $('#design-images').html(''); // Clear previous images
+        $('#design-images').html(designImages);
+        $('#adjust-images').html('');
+        $('#adjust-images').html(adjustImages);
+        $('.popup').show();
+        
+        // Ajouter une classe au corps pour figer le défilement
+        $('body').addClass('popup-open');
     });
+    
 
 
     $('.popup__btn--close').on('click', function() {

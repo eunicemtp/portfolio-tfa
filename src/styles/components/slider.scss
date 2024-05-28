@@ -144,7 +144,7 @@
 
                 // flex: 1 0 auto;
                 display: flex;
-                justify-content: end;
+                justify-content: center;
                 width:100%;
                 margin-bottom:10%;
                 box-sizing: border-box;
@@ -157,6 +157,18 @@
                     // right: 35%;
                     left: 0;
                 }
+                .desktop_img{
+
+                    width: 100%;
+                }
+            }
+        }
+
+        .adjust_images{
+
+            .popup__slider__el{
+
+                flex-direction: column;
             }
         }
 
@@ -164,6 +176,10 @@
 
             width: 50%;
         }
+
+
+
+        
 
         
     }

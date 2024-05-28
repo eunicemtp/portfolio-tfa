@@ -99,10 +99,45 @@
                   {# <p class="description" style="display: none;">{{ item.description }}</p> #}
                   <p class="info" style="display: none;">{{ item.info }}</p>
                   <p class="info2" style="display: none;">{{ item.info2 }}</p>
-                  <div class="design_images" style="display: none;">
+                  {# <div class="design_images" style="display: none;">
                     {% for image in item.design_images %}
                       <div class="popup__slider__el"><img class="design_img" src="{{ image }}" alt="{{ item.title }}"></div>
                     {% endfor %}
+                  </div> #}
+                  <div class="design_images" style="display: none;">
+                    <!-- Images Mobiles -->
+                    {% for image in item.design_images.mobile %}
+                        <div class="popup__slider__el"><img class="design_img mobile_img" src="{{ image }}" alt="{{ item.title }} Mobile Image"></div>
+                    {% endfor %}
+                    <div class="design_images--desktop">
+                      <!-- Images Desktop -->
+                      {% for image in item.design_images.desktop %}
+                        <div class="popup__slider__el"><img class="design_img desktop_img" src="{{ image }}" alt="{{ item.title }} Desktop Image"></div>
+                      {% endfor %}
+                    </div>
+                    
+                  </div>
+                  <div class="adjust_images" style="display: none;">
+                    <!-- Images Mobiles -->
+                    <div class="adjust_images">
+                      {% for image in item.adjust_images.mobile %}
+                          <div class="popup__slider__el">
+                            <img class="adjust_img mobile_img" src="{{ image.src }}" alt="{{ item.title }} Mobile Image">
+                            <p class="adjust_img--description">{{ image.description }}</p>
+                          </div>
+                      {% endfor %}
+                    </div>
+                    <div class="adjust_images adjust_images--desktop">
+                      <!-- Images Desktop -->
+                      {% for image in item.adjust_images.desktop %}
+                        <div class="popup__slider__el">
+                          <img class="adjust_img desktop_img" src="{{ image.src }}" alt="{{ item.title }} Desktop Image">
+                          <p class="adjust_img--description">{{ image.description }}</p>
+                        </div>
+                        
+                      {% endfor %}
+                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -154,7 +189,10 @@
               <path d="M0.566243 15L15 29.4338L29.4338 15L15 0.566243L0.566243 15ZM396 12.5L15 12.5V17.5L396 17.5V12.5Z" fill="#B1ACE5"/>
             </svg>
           </div>
-          <p class="popup__info popup__content second_info" id="adjust-content"></p>
+          {# <p class="popup__info popup__content second_info" id="adjust-content"></p> #}
+          <div class="popup__slider-container popup__content" id="adjust-content">
+            <div class="popup__slider popup__adjust_images " id="adjust-images"></div>
+          </div>
           
         </div>
         {# 

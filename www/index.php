@@ -21,24 +21,43 @@ $projets_details = array(
           "/assets/images/rux_bas2.png"
       ),
       "design_images" => array(
-        "/assets/images/img_mobile-1.png",
-        "/assets/images/img_mobile-2.png",
-        "/assets/images/img_mobile-3.png",
-        "/assets/images/img_mobile-1.png",
-        "/assets/images/img_mobile-2.png",
-        "/assets/images/img_mobile-3.png",
-        "/assets/images/img_mobile-1.png",
-        "/assets/images/img_mobile-2.png",
-        "/assets/images/img_mobile-3.png"
-    )
+        "mobile" => array(
+            "/assets/images/rux_img_mobile-1.png",
+            "/assets/images/rux_img_mobile-2.png",
+            "/assets/images/rux_img_mobile-3.png"
+        ),
+        "desktop" => array(
+            "/assets/images/rux_image_desktop-1.png",
+            "/assets/images/rux_image_desktop-2.png",
+            "/assets/images/rux_image_desktop-3.png"
+        )
+        ),
+      "adjust_images" => array(
+        "mobile" => array(
+          array(
+            "src" => "/assets/images/rux_img_mobile-3.png",
+            "description" => "Here I would like to modify the buttons, the words are too much compressed"
+          ),
+        ),
+      
+        "desktop" => array(
+          array(
+            "src" =>  "/assets/images/rux_img_tab-1.png",
+            "description" => "I had some responsive problems as you can see. I’m going to fix it"
+          ),
+          array(
+            "src" =>   "/assets/images/rux_img_tab-2.png",
+            // "description" => "Mobile image description 3"
+          ),
+           
+           
+        )
+        ),
 
   ),
   "Iolce" => array(
-      "description" => "This was one of my first website. The task was to watch a conference “Ethics of web design” resume, comment and obviously make a website with these informations",
-      "infoo" => "The decisions weren't easy at all, the hardest for me was choosing the colors... 
-                To make everything compatible, readable and not too overloaded, it had to be the perfect match 
-                with the conference and the rest of the site. After a few tries, I chose dark red, white and black. 
-                To stay in the spirit of the conference.",
+      "description" => "This was one of my first website.",
+      "info" => "The task was to watch a conference “Ethics of web design” resume, comment and obviously make a website with these informations.",
         "info2" => "The decisions weren't easy at all, the hardest for me was choosing the colors... 
         To make everything compatible, readable and not too overloaded, it had to be the perfect match 
         with the conference and the rest of the site. After a few tries, I chose dark red, white and black. 
@@ -46,14 +65,77 @@ $projets_details = array(
       "title" => "Iolce",
       "images" => array(
           "/assets/images/ethics.png"
-      )
+      ),
+      "design_images" => array(
+        "mobile" => array(
+            "/assets/images/rux_img_mobile-1.png",
+            "/assets/images/rux_img_mobile-2.png",
+            "/assets/images/rux_img_mobile-3.png"
+        ),
+        "desktop" => array(
+            "/assets/images/rux_image_desktop-1.png",
+            "/assets/images/rux_image_desktop-2.png",
+            "/assets/images/rux_image_desktop-3.png"
+        )
+        ),
+      "adjust_images" => array(
+        "mobile" => array(
+          array(
+            "src" => "/assets/images/rux_img_mobile-3.png",
+            "description" => "Here I would like to modify the buttons, the words are too much compressed"
+          ),
+        ),
+      
+        "desktop" => array(
+          array(
+            "src" =>  "/assets/images/rux_img_tab-1.png",
+            "description" => "I had some responsive problems as you can see. I’m going to fix it"
+          ),
+          array(
+            "src" =>   "/assets/images/rux_img_tab-2.png",
+            // "description" => "Mobile image description 3"
+          ),
+        ),
+      ),
+    
   ),
   "Ilab" => array(
       "description" => "orange",
       "title" => "Ilab",
       "images" => array(
           "/assets/images/ilab_img.png"
-      )
+      ),
+      "design_images" => array(
+        "mobile" => array(
+            "/assets/images/rux_img_mobile-1.png",
+            "/assets/images/rux_img_mobile-2.png",
+            "/assets/images/rux_img_mobile-3.png"
+        ),
+        "desktop" => array(
+            "/assets/images/rux_image_desktop-1.png",
+            "/assets/images/rux_image_desktop-2.png",
+            "/assets/images/rux_image_desktop-3.png"
+        )
+        ),
+      "adjust_images" => array(
+        "mobile" => array(
+          array(
+            "src" => "/assets/images/rux_img_mobile-3.png",
+            "description" => "Here I would like to modify the buttons, the words are too much compressed"
+          ),
+        ),
+      
+        "desktop" => array(
+          array(
+            "src" =>  "/assets/images/rux_img_tab-1.png",
+            "description" => "I had some responsive problems as you can see. I’m going to fix it"
+          ),
+          array(
+            "src" =>   "/assets/images/rux_img_tab-2.png",
+            // "description" => "Mobile image description 3"
+          ),
+        ),
+      ),
   )
 );
 

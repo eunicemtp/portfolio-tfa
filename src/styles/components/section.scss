@@ -31,7 +31,7 @@
 
 .section__contact{
 
-    height: 100vh;
+    // height: 100vh;w
     top: 10vh;
     
 
@@ -354,6 +354,9 @@
     .section__works{
 
         height: 100vh;
+        position: sticky;
+        top: 0;
+        margin-bottom: 100vh;
 
         .popup{
             // position: sticky;

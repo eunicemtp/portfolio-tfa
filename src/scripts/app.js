@@ -367,16 +367,23 @@ $(function() {
         changeBackground(nextSlideEl);
     }
 
-    function changeBackground(slide){
-        const worksSection = document.querySelector('#bg');
-        // Remove existing gradient-bg-* class from works section
-        const classes = Array.from(worksSection.classList).filter(c => c.startsWith('gradient-bg-'));
-        worksSection.classList.remove(...classes);
-        // Get the gradient class from data attribute
-        const newBgClass = slide.dataset.gradient;
-        // Add the new gradient-bg-* class to works section
-        worksSection.classList.add(newBgClass);
+    function changeBackground(slide) {
+        const elementsToChange = ['#bg', '#bgautre'];
+        
+        elementsToChange.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                // Remove existing gradient-bg-* class from the element
+                const classes = Array.from(element.classList).filter(c => c.startsWith('gradient-bg-'));
+                element.classList.remove(...classes);
+                // Get the gradient class from data attribute
+                const newBgClass = slide.dataset.gradient;
+                // Add the new gradient-bg-* class to the element
+                element.classList.add(newBgClass);
+            }
+        });
     }
+    
 
     function clearAuto(){
         if(interval){

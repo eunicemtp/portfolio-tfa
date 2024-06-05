@@ -1,10 +1,13 @@
 <?php
 
-require_once 'includes/functions.php';
+include 'includes/functions.php';
 
 $twig = getTwigInstance();
 
-$template = $twig->load('index.twig');
+$page = isset($_GET['page']) ? $_GET['page'] : 'index';
+
+$template = $twig->load("{$page}.twig");
+
 
 $projets_details = array(
   "Rux" => array(
@@ -17,36 +20,36 @@ $projets_details = array(
                  design for my website that reflected my ideas, that's tricky",
       "title" => "Rux",
       "images" => array(
-          "/assets/images/rux_haut2.png",
-          "/assets/images/rux_bas2.png"
+          "assets/images/rux_haut2.png",
+          "assets/images/rux_bas2.png"
       ),
       "design_images" => array(
         "mobile" => array(
-            "/assets/images/rux_img_mobile-1.png",
-            "/assets/images/rux_img_mobile-2.png",
-            "/assets/images/rux_img_mobile-3.png"
+            "assets/images/rux_img_mobile-1.png",
+            "assets/images/rux_img_mobile-2.png",
+            "assets/images/rux_img_mobile-3.png"
         ),
         "desktop" => array(
-            "/assets/images/rux_image_desktop-1.png",
-            "/assets/images/rux_image_desktop-2.png",
-            "/assets/images/rux_image_desktop-3.png"
+            "assets/images/rux_image_desktop-1.png",
+            "assets/images/rux_image_desktop-2.png",
+            "assets/images/rux_image_desktop-3.png"
         )
         ),
       "adjust_images" => array(
         "mobile" => array(
           array(
-            "src" => "/assets/images/rux_img_mobile-3.png",
+            "src" => "assets/images/rux_img_mobile-3.png",
             "description" => "Here I would like to modify the buttons, the words are too much compressed"
           ),
         ),
       
         "desktop" => array(
           array(
-            "src" =>  "/assets/images/rux_img_tab-1.png",
+            "src" =>  "assets/images/rux_img_tab-1.png",
             "description" => "I had some responsive problems as you can see. I’m going to fix it"
           ),
           array(
-            "src" =>   "/assets/images/rux_img_tab-2.png",
+            "src" =>   "assets/images/rux_img_tab-2.png",
             // "description" => "Mobile image description 3"
           ),
            
@@ -64,18 +67,18 @@ $projets_details = array(
       To stay in the spirit of the conference.",        
     "title" => "Iolce",
     "images" => array(
-        "/assets/images/ethics.png"
+        "assets/images/ethics.png"
     ),
     "design_images" => array(
       "mobile" => array(
-          "/assets/images/iolce_image_mobile-1.png",
-          "/assets/images/iolce_image_mobile-2.png",
-          "/assets/images/iolce_image_mobile-3.png"
+          "assets/images/iolce_image_mobile-1.png",
+          "assets/images/iolce_image_mobile-2.png",
+          "assets/images/iolce_image_mobile-3.png"
       ),
       "desktop" => array(
-          "/assets/images/iolce_image_desktop-1.png",
-          "/assets/images/iolce_image_desktop-2.png",
-          "/assets/images/iolce_image_desktop-3.png"
+          "assets/images/iolce_image_desktop-1.png",
+          "assets/images/iolce_image_desktop-2.png",
+          "assets/images/iolce_image_desktop-3.png"
       )
     ),
     "adjust_images" => array(
@@ -85,15 +88,15 @@ $projets_details = array(
     
       "desktop" => array(
         array(
-          "src" => "/assets/images/iolce_image_tab-4.png",
+          "src" => "assets/images/iolce_image_tab-4.png",
           "description" => "The idea here will be to have the title seen on the all screen."
         ),
         array(
-          "src" =>  "/assets/images/iolce_image_desktop-3.png",
+          "src" =>  "assets/images/iolce_image_desktop-3.png",
           "description" => "I had some problems adjusting things as you can see. I’m going to fix it"
         ),
         array(
-          "src" =>   "/assets/images/iolce_image_tab-5.png",
+          "src" =>   "assets/images/iolce_image_tab-5.png",
           "description" => "At the moment I didn't know how place them, so it's really not reponsive"
         ),
       ),
@@ -104,35 +107,35 @@ $projets_details = array(
     "description" => "orange",
     "title" => "Ilab",
     "images" => array(
-        "/assets/images/ilab_img.png"
+        "assets/images/ilab_img.png"
     ),
     "design_images" => array(
       "mobile" => array(
-          "/assets/images/rux_img_mobile-1.png",
-          "/assets/images/rux_img_mobile-2.png",
-          "/assets/images/rux_img_mobile-3.png"
+          "assets/images/rux_img_mobile-1.png",
+          "assets/images/rux_img_mobile-2.png",
+          "assets/images/rux_img_mobile-3.png"
       ),
       "desktop" => array(
-          "/assets/images/rux_image_desktop-1.png",
-          "/assets/images/rux_image_desktop-2.png",
-          "/assets/images/rux_image_desktop-3.png"
+          "assets/images/rux_image_desktop-1.png",
+          "assets/images/rux_image_desktop-2.png",
+          "assets/images/rux_image_desktop-3.png"
       )
     ),
     "adjust_images" => array(
       "mobile" => array(
         array(
-          "src" => "/assets/images/rux_img_mobile-3.png",
+          "src" => "assets/images/rux_img_mobile-3.png",
           "description" => "Here I would like to modify the buttons, the words are too much compressed"
         ),
       ),
     
       "desktop" => array(
         array(
-          "src" =>  "/assets/images/rux_img_tab-1.png",
+          "src" =>  "assets/images/rux_img_tab-1.png",
           "description" => "I had some responsive problems as you can see. I’m going to fix it"
         ),
         array(
-          "src" =>   "/assets/images/rux_img_tab-2.png",
+          "src" =>   "assets/images/rux_img_tab-2.png",
           // "description" => "Mobile image description 3"
         ),
       ),

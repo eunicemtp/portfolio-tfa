@@ -11,3 +11,7 @@ function getTwigInstance() {
   return $twig;
 }
 
+function templateExists($twig, $page) {
+  $loader = $twig->getLoader();
+  return $loader->exists("{$page}.twig");
+}

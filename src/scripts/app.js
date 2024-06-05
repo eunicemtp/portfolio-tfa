@@ -8,34 +8,199 @@ gsap.registerPlugin(ScrollTrigger,Draggable);
 
 var contenus = document.querySelectorAll(".contenu");
 
-const mediaQuery = window.matchMedia('(max-width: 899px)')
+const mediaQueryMobile = window.matchMedia('(max-width: 899px)')
 // Check if the media query is true
-if (mediaQuery.matches) {
+if (mediaQueryMobile.matches) {
    
     document.addEventListener("scroll", function() {
     
-    contenus.forEach(contenu => {
+        contenus.forEach(contenu => {
 
-        var masque = document.querySelector(".masque");
-    
-    
-        var masqueRect = masque.getBoundingClientRect();
-        var contenuRect = contenu.getBoundingClientRect();
+            var masque = document.querySelector(".masque");
         
-        if (
-        contenuRect.bottom > masqueRect.top &&
-        contenuRect.top < masqueRect.bottom
-        ) {
-        gsap.to(contenu, { opacity: 0, duration: 0.2 });
-        } else {
-        gsap.to(contenu, { opacity: 1, duration: 0.3 });
-        }
         
-           
-    });
+            var masqueRect = masque.getBoundingClientRect();
+            var contenuRect = contenu.getBoundingClientRect();
+            
+            if (
+            contenuRect.bottom > masqueRect.top &&
+            contenuRect.top < masqueRect.bottom
+            ) {
+            gsap.to(contenu, { opacity: 0, duration: 0.2 });
+            } else {
+            gsap.to(contenu, { opacity: 1, duration: 0.3 });
+            }
+            
+            
+        });
    
-});
+    });
 }
+
+const mediaQueryDesktop = window.matchMedia('(min-width: 1024px)')
+// Check if the media query is true
+if (mediaQueryDesktop.matches) {
+   
+
+    
+    // // ScrollTrigger pour pinner .section__works
+
+    ScrollTrigger.create({
+        trigger: ".section__myself", // élément à pinner
+        start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+        end: "+=200%", // fin du pinning après 300vh
+        pin: true, // active le pinning
+        // pinSpacing: true, // active l'ajout de l'espace de pinning
+        
+    });
+    ScrollTrigger.create({
+        trigger: "#bg3", // élément à pinner
+        start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+        end: "+=300%", // fin du pinning après 300vh
+        pin: true, // active le pinning
+        // pinSpacing: true, // active l'ajout de l'espace de pinning
+       
+    });
+    ScrollTrigger.create({
+        trigger: ".section__works", // élément déclencheur
+        start: "top top", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
+        end: "+=15%", // fin du pinning après 100vh
+        pin: true, // élément à pinner
+    });
+
+    // ScrollTrigger.create({
+    //     trigger: "#bgautre", // élément déclencheur
+    //     start: "top top", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
+    //     end: "+=15%", // fin du pinning après 100vh
+    //     pin: true, // élément à pinner
+    //     markers: true // active les marqueurs pour le debugging
+    // });
+
+    gsap.to(".bigTriangle", {
+        scrollTrigger: {
+        trigger: "#bg3",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        toggleActions: "play reverse play reverse",
+       
+        },
+        // opacity: 0,
+        y:700,
+        ease: "none",
+        onComplete: () => {
+            gsap.to(".bigTriangle", {
+                y:0,
+                ease: "none",
+            });
+        }
+    });
+
+    var hide = gsap.timeline();
+    hide.to(".firstHide",{opacity:0})
+        .from(".secondHide",{opacity:0});
+    
+    
+    gsap.to(".triangleUp", {
+        scrollTrigger: {
+            trigger: "#bg3",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            toggleActions: "play reverse play reverse",
+            onEnter: () => hide.play(),
+            onLeave: () => hide.reverse(),
+            onEnterBack: () => hide.play(),
+            onLeaveBack: () => hide.reverse(),
+            
+        },
+        y: -400,
+        ease: "none",
+        
+        onComplete: () => {
+            gsap.to(".triangleUp", {
+                y: 0,
+                ease: "none",
+                onComplete: () => {
+                    hide.reverse();
+                    scrollAnimation(".smallTriangle", -700,".pin","top top");
+                    scrollAnimation(".smallTriangleDown", 700,".pin","top top");
+                    scrollAnimation(".flyers", -1000,".pin","center top");
+                }
+            });
+        }
+    });
+
+    function scrollAnimation(selector, yValue,pin,starting) {
+        gsap.to(selector, {
+
+            scrollTrigger: {
+                trigger: pin, // Trigger commun
+                start: starting, // Début commun
+                end: "bottom top", // Fin commune
+                scrub: true, // Défilement en douceur commun
+                toggleActions: "play reverse play reverse",
+                
+            },
+            y: yValue,
+            ease: "none",
+            onComplete: () => {
+                gsap.to(selector, {
+                    y: 0,
+                    ease: "none",
+                });
+            }
+        });
+    }
+        
+        
+    
+    
+
+    // gsap.to(".triangleLeft", {
+    //     scrollTrigger: {
+    //     trigger: "#bg3",
+    //     start: "top top",
+    //     // end: "bottom top",
+    //     scrub: true,
+    //     markers: true, // Pour le débogage, vous pouvez les supprimer après
+    //     },
+    //     // opacity: 0,
+    //     x:-100,
+    //     ease: "none",
+    //     onComplete: () => {
+    //         gsap.to(".triangleLeft", {
+    //             y:0,
+    //             ease: "none",
+    //         });
+    //     }
+    // });
+    // gsap.to(".triangleRight", {
+    //     scrollTrigger: {
+    //     trigger: "#bg3",
+    //     start: "top top",
+    //     // end: "left right",
+    //     scrub: true,
+    //     markers: true, // Pour le débogage, vous pouvez les supprimer après
+    //     },
+    //     // opacity: 0,
+    //     x:100,
+    //     ease: "none",
+    //     duration:0.5,
+    //     onComplete: () => {
+    //         gsap.to(".triangleRight", {
+    //             y:0,
+    //             ease: "none",
+    //         });
+    //     }
+    // });
+
+}
+
+
+
+
+
 
 
 
@@ -85,25 +250,7 @@ if (mediaQuery.matches) {
 
 // })
 $(function() {
-    // $('.square').on('click', function() {
-    //   var description = $(this).find('.description').text();
-    //   var title = $(this).find('.title--popup').text();
-    //   var info = $(this).find('.info').text();
-    //   var info2 = $(this).find('.info2').text();
-    //   var designImages = $(this).find('.design_images').html();
-    //   var designImages = $(this).find('.design_images2').html();
-    //   $('.popup__title').text(title);
-    //   $('.popup__description').text(description);
-    //   $('.popup__info').text(info);
-    //   $('.second_info').text(info2);
-    //   $('#design-images').html(''); // Clear previous images
-    //   $('#design-images').html(designImages);
-    //   $('#design-images2').html(designImages);
-    //   $('.popup').show();
-      
-    //   // Ajouter une classe au corps pour figer le défilement
-    //   $('body').addClass('popup-open');
-    // });
+
 
     $('.square').on('click', function() {
         var description = $(this).find('.description').text();
@@ -303,108 +450,173 @@ $(function() {
 //     updateSlidePosition(currentSlide);
 // });
 
+
+
+
+
 /////////////////////
 /// PROJECT SLIDER///
 ////////////////////
 
+const gradients = [
+    ['#311547', '#220334'],
+    ['#912823', '#590400'],
+    ['#2F4C82', '#0E0F1B'],
+    ['#93c47d', '#6aa84f']
+  ];
+  
+  const svgElement = document.querySelector('.section__myself-bg');
+  const paths = document.querySelectorAll('.triangle');
+  let nextSlideEl;
+  
+  function animateSVGOut(elements) {
 
-
-    let prevButton = document.querySelector('.btn__prev');
-    let nextButton = document.querySelector('.btn__next');
-    let slides = document.querySelectorAll('.slider__el');
-    let interval;
-    let timeout;
-
-    // Initialize the first slide as visible
-    if (slides.length > 0) {
-        slides[0].classList.add('slider__el--show');
-        changeBackground(slides[0]);
-    }
-
-    prevButton.addEventListener('click', (e) => {
-        prevSlide();
-        clearAuto();
-        setupTimeout();
-    });
-
-    nextButton.addEventListener('click', (e) => {
-        nextSlide();
-        clearAuto();
-        setupTimeout();
-    });
-
-    document.addEventListener('keydown', keyboardListener);
-
-    function keyboardListener(event){
-        clearAuto();
-        setupTimeout();
-        if(event.code == 'ArrowLeft'){
-            prevSlide();
-        } else if(event.code == 'ArrowRight'){
-            nextSlide();
-        }
-    }
-
-    function prevSlide(){
-        let activeSlideEl = document.querySelector('.slider__el--show');
-        let prevSlideEl = activeSlideEl.previousElementSibling;
-        if(!prevSlideEl || !prevSlideEl.classList.contains('slider__el')){
-            prevSlideEl = activeSlideEl.parentNode.lastElementChild;
-        }
-        activeSlideEl.classList.remove('slider__el--show');
-        prevSlideEl.classList.add('slider__el--show');
-        changeBackground(prevSlideEl);
-    }
-
-    function nextSlide(){
-        let activeSlideEl = document.querySelector('.slider__el--show');
-        let nextSlideEl = activeSlideEl.nextElementSibling;
-        if(!nextSlideEl || !nextSlideEl.classList.contains('slider__el')){
-            nextSlideEl = activeSlideEl.parentNode.firstElementChild;
-        }
-        activeSlideEl.classList.remove('slider__el--show');
-        nextSlideEl.classList.add('slider__el--show');
-        changeBackground(nextSlideEl);
-    }
-
-    function changeBackground(slide) {
-        const elementsToChange = ['#bg', '#bgautre'];
-        
-        elementsToChange.forEach(selector => {
-            const element = document.querySelector(selector);
-            if (element) {
-                // Remove existing gradient-bg-* class from the element
-                const classes = Array.from(element.classList).filter(c => c.startsWith('gradient-bg-'));
-                element.classList.remove(...classes);
-                // Get the gradient class from data attribute
-                const newBgClass = slide.dataset.gradient;
-                // Add the new gradient-bg-* class to the element
-                element.classList.add(newBgClass);
-            }
+    // gsap.from(elements, {opacity: 0}),
+    gsap.to(elements, {
+      opacity: 0,
+      duration: 0.01,
+      stagger: 0.1,
+      ease: "power2.inOut",
+      onComplete: () => {
+        elements.forEach(element => {
+          element.style.opacity = 0; // Ensure opacity is set to 0 after animation completes
         });
-    }
-    
-
-    function clearAuto(){
-        if(interval){
-            clearInterval(interval);
-        } 
-        if(timeout){
-            clearTimeout(timeout);
-        }
-    }
-
-    // function launchAuto(){
-    //     interval = setInterval(() => {
-    //         nextSlide();
-    //     }, 5000);
-    // }
-
-    function setupTimeout(){
-        timeout = setTimeout(() => {
-            launchAuto();
-        }, 5000);
-    }
-
+        
+        showNextSlide(); // Afficher le prochain slide après l'animation
+      }
+    });
+    // maskNextSlide();
+  }
+  
+//   function animateSVG(elements) {
+//     gsap.killTweensOf(elements);
+//     gsap.fromTo(elements, 
+//       {
+//         opacity: 0,
+//         y: -20,
+//       }, 
+//       {
+//         opacity: 1,
+//         y: 0,
+//         duration: 1,
+//         stagger: 0.1,
+//         ease: "power2.out",
+//       });
+//   }
+  
+  function changeColors(elements, gradient) {
+    elements.forEach((element, index) => {
+      element.setAttribute('fill', gradient[index % 2]);
+      element.style.opacity = 1;
+    });
+  }
+  
+  let prevButton = document.querySelector('.btn__prev');
+  let nextButton = document.querySelector('.btn__next');
+  let slides = document.querySelectorAll('.slider__el');
+  let interval;
+  let timeout;
+  
+  if (slides.length > 0) {
+    slides[0].classList.add('slider__el--show');
+    changeBackground(slides[0]);
+  }
+  
+  prevButton.addEventListener('click', (e) => {
+    animateSVGOut(paths); // Démarrer l'animation pour masquer les chemins SVG
+    prevSlide();
+    clearAuto();
     setupTimeout();
+  });
+  
+  nextButton.addEventListener('click', (e) => {
+    animateSVGOut(paths); // Démarrer l'animation pour masquer les chemins SVG
+    nextSlide();
+    clearAuto();
+    setupTimeout();
+  });
+  
+  document.addEventListener('keydown', keyboardListener);
+  
+  function keyboardListener(event){
+    clearAuto();
+    setupTimeout();
+    if(event.code == 'ArrowLeft'){
+      prevSlide();
+    } else if(event.code == 'ArrowRight'){
+      nextSlide();
+    }
+  }
+  
+  function prevSlide(){
+    let activeSlideEl = document.querySelector('.slider__el--show');
+    let prevSlideEl = activeSlideEl.previousElementSibling;
+    if(!prevSlideEl || !prevSlideEl.classList.contains('slider__el')){
+      prevSlideEl = activeSlideEl.parentNode.lastElementChild;
+    }
+    activeSlideEl.classList.remove('slider__el--show');
+    prevSlideEl.classList.add('slider__el--show');
+    changeBackground(prevSlideEl);
+  }
+  
+  function nextSlide(){
+    let activeSlideEl = document.querySelector('.slider__el--show');
+    
+    nextSlideEl = activeSlideEl.nextElementSibling;
+    if(!nextSlideEl || !nextSlideEl.classList.contains('slider__el')){
+      nextSlideEl = activeSlideEl.parentNode.firstElementChild;
+    }
+    activeSlideEl.classList.remove('slider__el--show');
+    nextSlideEl.classList.add('slider__el--show');
+    nextSlideEl.style.opacity = 0;
+    changeBackground(nextSlideEl);
+  }
+    function maskNextSlide() {
+    nextSlideEl.style.opacity = 0; // Masquer le prochain slide jusqu'à ce que l'animation soit terminée
+  }
+  function showNextSlide() {
+    nextSlideEl.style.opacity = 1; // Afficher le prochain slide
+    // animateSVG(paths); // Démarrer l'animation pour afficher les chemins SVG du prochain slide
+  }
+  
 
+  
+  function changeBackground(slide) {
+    const elementsToChange = ['#bgautre'];
+    elementsToChange.forEach(selector => {
+      const element = document.querySelector(selector);
+      if (element) {
+        const classes = Array.from(element.classList).filter(c => c.startsWith('gradient-bg-'));
+        element.classList.remove(...classes);
+        const newBgClass = slide.dataset.gradient;
+        element.classList.add(newBgClass);
+        const gradientIndex = parseInt(newBgClass.split('-')[2]) - 1;
+        const gradient = gradients[gradientIndex];
+        changeColors(paths, gradient);
+      }
+    });
+  }
+  
+  function clearAuto(){
+    if(interval){
+      clearInterval(interval);
+    } 
+    if(timeout){
+      clearTimeout(timeout);
+    }
+  }
+  
+  function setupTimeout(){
+    timeout = setTimeout(() => {
+      launchAuto();
+    }, 5000);
+  }
+  
+  // function launchAuto(){
+  //   interval = setInterval(() => {
+  //     animateSVGOut(paths); // Démarrer l'animation pour masquer les chemins SVG
+  //   }, 5000);
+  // }
+  
+  setupTimeout();
+  

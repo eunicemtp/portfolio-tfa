@@ -28,6 +28,28 @@
     top: 0;
     outline: 2px solid blue;
 }
+    .section__myself-bg{
+
+        width: 100%;
+        // height: 100%;
+        position: absolute;
+        top: -5vh;
+        margin: 0 auto;
+        object-fit: cover;
+    
+      
+    }
+
+    .pin{
+
+        background: aqua;
+        height: 100vh;
+        width: 200px;
+        position: relative;
+        top: 150vh;
+    }
+
+
 
 .section__contact{
 
@@ -273,8 +295,8 @@
     .section__works{
 
         .masque {
-            position: sticky;
-            top: 0;
+            // position: sticky;
+            // top: 0;
             z-index: 1; /* Assure que le masque est au-dessus du contenu */
         }
           
@@ -354,9 +376,10 @@
     .section__works{
 
         height: 100vh;
-        position: sticky;
-        top: 0;
-        margin-bottom: 100vh;
+        // top: 300vh;
+        // position: sticky;
+        // top: 0;
+        // margin-bottom: 100vh;
 
         .popup{
             // position: sticky;
@@ -414,6 +437,35 @@
             margin-left: 8%;
             
         }
+
+    }
+
+    // .section__me{
+
+    //     .intro{
+
+    //         z-index: -1;
+    //     }
+
+    //     #bg3{
+
+    //         z-index: 1;
+    //     }
+
+    //     .title{
+
+    //         z-index:2;
+    //      }
+    // }
+
+    .section__myself{
+
+        position: relative;
+        // top: 100vh;
+        margin-bottom: 60px;
+        width: 100w;
+
+
 
     }
 

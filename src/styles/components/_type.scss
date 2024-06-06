@@ -37,6 +37,11 @@ h4{
   font-size: var(--mobile-h4-size);
   font-variation-settings: var(--font-family-h2-variation)
 }
+h5{
+  font-size: var(--mobile-h5-size);
+  font-variation-settings: var(--font-family-h2-variation)
+}
+
 .title {
   font-family: var(--font-family-title);
   //opacity: 50%;
@@ -63,6 +68,11 @@ h4{
 
     padding: var(--desktop-title-spaceBetween);
   }
+  h1{font-size: var(--desktop-h1-size);}
+  h2{font-size: var(--desktop-h2-size);}
+  h3{font-size: var(--desktop-h3-size);}
+  h4{font-size: var(--desktop-h4-size);}
+  h5{font-size: var(--desktop-h5-size);}
 
 }
 

@@ -46,15 +46,39 @@ $default_color_2: nth($x_gradient, 2);
   #bgautre{
     display: block;
     position: absolute;
-    top: 800vh;
-    left: 0;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    // top: 350vh;
+    // left: 0;
+    // width: 100vw;
+    // margin: 0;
+    // padding: 0;
+    // height: 100vh;
     // outline: 2px solid #6aa84f;
-    border: 2px solid #6aa84f;
+    // border: 2px solid #6aa84f;
+    // opacity: 0;
+
+    // top: 105vh;
+    left: 0;
+    // width: 100vw;
+    // height: 120vh;
+     width: 80vw;
+        height: 75vh;
+        overflow: hidden;
+        margin: 0 auto;
+        z-index: -10;
+
+    
   
+  }
+
+  #bgautre2{
+    position: absolute;
+    // top: 300%;
+    margin-top: -25vh;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    background: #220334;
+
   }
 
   #bg3 .triangles path {
@@ -83,7 +107,7 @@ $default_color_2: nth($x_gradient, 2);
     overflow: hidden;
     // z-index: -5;
 
-    border: 2px solid #0fd1c4;
+    // border: 2px solid #0fd1c4;
 
     // .title, #textPath{
     //   stroke:transparent;

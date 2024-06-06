@@ -26,7 +26,7 @@
     margin: 0 auto;
     position: relative;
     top: 0;
-    outline: 2px solid blue;
+    // outline: 2px solid blue;
 }
     .section__myself-bg{
 
@@ -42,7 +42,7 @@
 
     .pin{
 
-        background: aqua;
+        // background: aqua;
         height: 100vh;
         width: 200px;
         position: relative;
@@ -376,7 +376,7 @@
     .section__works{
 
         height: 100vh;
-        // top: 300vh;
+        // top: 20vh;
         // position: sticky;
         // top: 0;
         // margin-bottom: 100vh;
@@ -384,6 +384,7 @@
         .popup{
             // position: sticky;
             // top: 0;
+            width: 100vw;
             
 
             .popup__description {
@@ -461,8 +462,8 @@
     .section__myself{
 
         position: relative;
-        // top: 100vh;
-        margin-bottom: 60px;
+        // top: 35vh;
+        // margin-bottom: 60px;
         width: 100w;
 
 

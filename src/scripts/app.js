@@ -67,10 +67,11 @@ if (mediaQueryDesktop.matches) {
         end: "+=15%", // fin du pinning après 100vh
         pin: true, // élément à pinner
     });
+    
 
     // ScrollTrigger.create({
     //     trigger: "#bgautre", // élément déclencheur
-    //     start: "top top", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
+    //     start: "top 105vh;", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
     //     end: "+=15%", // fin du pinning après 100vh
     //     pin: true, // élément à pinner
     //     markers: true // active les marqueurs pour le debugging
@@ -459,11 +460,11 @@ $(function() {
 ////////////////////
 
 const gradients = [
-    ['#311547', '#220334'],
-    ['#912823', '#590400'],
-    ['#2F4C82', '#0E0F1B'],
-    ['#93c47d', '#6aa84f']
-  ];
+    '#220334',
+    '#590400',
+    '#0E0F1B',
+    '#6aa84f'
+];
   
   const svgElement = document.querySelector('.section__myself-bg');
   const paths = document.querySelectorAll('.triangle');
@@ -504,12 +505,13 @@ const gradients = [
 //       });
 //   }
   
-  function changeColors(elements, gradient) {
-    elements.forEach((element, index) => {
-      element.setAttribute('fill', gradient[index % 2]);
-      element.style.opacity = 1;
+function changeColors(elements, color) {
+    elements.forEach(element => {
+        element.setAttribute('fill', color);
+        element.setAttribute('stroke', color);
+        element.style.opacity = 1;
     });
-  }
+}
   
   let prevButton = document.querySelector('.btn__prev');
   let nextButton = document.querySelector('.btn__next');
@@ -584,18 +586,18 @@ const gradients = [
   function changeBackground(slide) {
     const elementsToChange = ['#bgautre'];
     elementsToChange.forEach(selector => {
-      const element = document.querySelector(selector);
-      if (element) {
-        const classes = Array.from(element.classList).filter(c => c.startsWith('gradient-bg-'));
-        element.classList.remove(...classes);
-        const newBgClass = slide.dataset.gradient;
-        element.classList.add(newBgClass);
-        const gradientIndex = parseInt(newBgClass.split('-')[2]) - 1;
-        const gradient = gradients[gradientIndex];
-        changeColors(paths, gradient);
-      }
+        const element = document.querySelector(selector);
+        if (element) {
+            const classes = Array.from(element.classList).filter(c => c.startsWith('gradient-bg-'));
+            element.classList.remove(...classes);
+            const newBgClass = slide.dataset.gradient;
+            element.classList.add(newBgClass);
+            const gradientIndex = parseInt(newBgClass.split('-')[2]) - 1;
+            const gradient = gradients[gradientIndex];
+            changeColors(paths, gradient);
+        }
     });
-  }
+    }
   
   function clearAuto(){
     if(interval){

@@ -44,12 +44,24 @@
     /* Basic slider styles */
     .slider-container {
         position: relative;
-        width: 60vw;
+        width: 50vw;
         height: 80vh;
         margin: 0 auto;
         // left: -6%;
-        // overflow: hidden;
-        border: 2px solid red;
+        overflow: hidden;
+        // border: 2px solid red;
+        padding: 20px;
+        // top: 50%;
+        // transform: translateY(-50%);
+
+        // background: url(/www/assets/images/secondBg1.svg);
+        svg{
+            position: absolute;
+            width: 100vw;
+            // height: 100vh;
+            margin: 0 auto;
+            left: -30%;
+          }
     }
 
 
@@ -68,9 +80,9 @@
             right: 0;
             // left: 80%;
             width: 50%;
-            top: 60%;
+            top: 50%;
             height: fit-content;
-            transform: translateY(-50%);
+            // transform: translateY(-50%);
         }
         
     }

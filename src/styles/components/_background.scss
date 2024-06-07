@@ -6,7 +6,10 @@
   height: 100vh;
   
 }
+html{
 
+  
+}
 
 
 $x_gradient: ( #311547, #220334 );
@@ -47,8 +50,30 @@ $default_color_2: nth($x_gradient, 2);
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  
+  // overflow-x: hidden;
  
+  
+}
+
+// #bg4 .triangles path {
+
+//   fill: #220334;
+//   stroke:#220334;
+//   stroke-width: 3px;
+  
+// }
+
+#bg4{ 
+  position: absolute;
+
+  top: 520vh;
+  
+  left: 0;
+  width: 99vw;
+  height: 130vh;
+  overflow: hidden;
+
   
 }
 @media screen and (max-width: 1023px) {#bgautre{display: none;}}

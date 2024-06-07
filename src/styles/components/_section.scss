@@ -3,12 +3,12 @@
 
     .pin{
         top: 120vh;
-        background: red;
+        // background: red;
         width: 400px;
     }
     .pin2{
 
-        background: aqua;
+        // background: aqua;
         height: 70vh;
         width: 200px;
         position: relative;
@@ -48,22 +48,7 @@
 
 }
 
-    .section__myself-bg{
 
-        width: auto;
-        position: absolute;
-      
-        height: 100vh;
-        right: 0;
-    }
-
-
-    .intro{
-
-        width: 66%;
-        position: absolute;
-        bottom: 5%;
-    }
 
     
 
@@ -458,29 +443,7 @@
 
     }
 
-    .section__myself{
 
-        position: relative;
-
-        width: 100vw;
-        height: 100vh;
-
-
-
-    }
-    #background-mobile{display: none;}
-
-    .section__myself-bg{
-
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: -5vh;
-        margin: 0 auto;
-        object-fit: cover;
-    
-      
-    }
 
     .menu {
         

@@ -61,8 +61,8 @@ if (mediaQueryAllMobile.matches) {
 });
 
 
-    scrollAnimationMobile1(".triangLeft", 0,400);
-    scrollAnimationMobile1(".triangledown", 400,0);
+    scrollAnimationMobile1(".triangLeft", 0,600);
+    scrollAnimationMobile1(".triangledown", 600,0);
     var hide = gsap.timeline();
     var hideFlyers = gsap.timeline();
     hideFlyers.to(".firstHide",{opacity:0});
@@ -86,7 +86,7 @@ if (mediaQueryAllMobile.matches) {
             onLeaveBack: () => hideFlyers.reverse(),
             
         },
-        y: -300,
+        y: -400,
         ease: "none",
         
         onComplete: () => {
@@ -94,7 +94,7 @@ if (mediaQueryAllMobile.matches) {
                 y: 0,
                 ease: "none",
                 onComplete: () => {
-                    
+                    // hide.reverse();
                     scrollAnimationMobile2(".triangleBuzzle", 0,400,".pin","top top");
                     
                 }
@@ -209,7 +209,7 @@ if (mediaQueryDesktop.matches) {
    
   ScrollTrigger.create({
     trigger: ".section__myself", // élément à pinner
-    start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+    start: "top top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
     end: "+=200%", // fin du pinning après 300vh
     pin: true, // active le pinning
     
@@ -221,6 +221,20 @@ if (mediaQueryDesktop.matches) {
       end: "+=15%", // fin du pinning après 100vh
       pin: true, // élément à pinner
   });
+
+  // ScrollTrigger.create({
+  //   trigger: ".section__myself-bg2", // élément à pinner
+  //   start: "top top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+  //   end: "+=200%", // fin du pinning après 300vh
+  //   pin: ".section__myself", // active le pinning
+  // });
+
+  // ScrollTrigger.create({
+  //   trigger: ".section__myself-bg2", // élément à pinner
+  //   start: "top top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+  //   end: "+=200%", // fin du pinning après 300vh
+  //   pin: true, // active le pinning
+  // });
     
     gsap.to(".bigTriangle", {
         scrollTrigger: {

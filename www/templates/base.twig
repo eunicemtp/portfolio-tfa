@@ -62,7 +62,7 @@
   <script src="assets/scripts/background.js" defer></script>
 
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <header>
         <!-- Contenu commun de l'en-tête -->
         {% block header %}{% endblock %}

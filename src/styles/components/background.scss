@@ -40,7 +40,45 @@ $default_color_2: nth($x_gradient, 2);
 //   background: radial-gradient(ellipse at center, $color_1 0%, darken($color_2, 5%) 100%);
 // //   overflow: hidden;
 // }
-@media screen and (max-width: 1023px) {#bgautre, #bg3{display: none;}}
+
+#bg3 .triangles path {
+  // fill: radial-gradient(ellipse at center, #311547 0%, (#220334, 5%) 100%);
+  fill: #220334;
+  stroke:#220334;
+  stroke-width: 3px;
+  
+}
+
+#bg3{ 
+  position: absolute;
+  // top: 100vh;
+  // left: 0;
+  // width: 100vw;
+
+  // margin: 0;
+  // padding: 0;
+  // height: 100vh;
+  // position: fixed;
+  // position: fixed;
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // z-index: -5;
+
+  // border: 2px solid #0fd1c4;
+
+  // .title, #textPath{
+  //   stroke:transparent;
+  //   fill: transparent;
+
+  // }
+
+  
+  
+}
+@media screen and (max-width: 1023px) {#bgautre{display: none;}}
 @media screen and (min-width: 1024px) {
 
   #bgautre{
@@ -81,43 +119,7 @@ $default_color_2: nth($x_gradient, 2);
 
   }
 
-  #bg3 .triangles path {
-    // fill: radial-gradient(ellipse at center, #311547 0%, (#220334, 5%) 100%);
-    fill: #220334;
-    stroke:#220334;
-    stroke-width: 3px;
-    
-  }
-
-  #bg3{ 
-    position: absolute;
-    // top: 100vh;
-    // left: 0;
-    // width: 100vw;
-
-    // margin: 0;
-    // padding: 0;
-    // height: 100vh;
-    // position: fixed;
-    // position: fixed;
-    top: 100vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    // z-index: -5;
-
-    // border: 2px solid #0fd1c4;
-
-    // .title, #textPath{
-    //   stroke:transparent;
-    //   fill: transparent;
-
-    // }
-
-    
-    
-  }
+ 
 
 
 

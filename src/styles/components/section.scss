@@ -1,3 +1,27 @@
+@media screen and (max-width: 1023px) {
+
+    .section__myself{
+
+        // top: -100vh;
+    }
+
+    .pin{
+        top: 120vh;
+        background: red;
+        width: 400px;
+    }
+    .pin2{
+
+        background: aqua;
+        height: 70vh;
+        width: 200px;
+        position: relative;
+        top: 150vh;
+    }
+    #background-desktop{display: none;}
+
+    
+}
 .acceuil{
 
     position: relative;
@@ -25,20 +49,32 @@
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    top: 0;
+    // top: -100vh;
     // outline: 2px solid blue;
 }
+
     .section__myself-bg{
 
-        width: 100%;
-        // height: 100%;
+        width: auto;
         position: absolute;
-        top: -5vh;
-        margin: 0 auto;
-        object-fit: cover;
-    
-      
+        // top: 0vh;
+        height: 100vh;
+        right: 0;
     }
+
+    // .section__myself{
+
+    //     height: 80vh;
+    // }
+
+    .intro{
+
+        width: 66%;
+        position: absolute;
+        bottom: 5%;
+    }
+
+    
 
     .pin{
 
@@ -51,10 +87,10 @@
 
 
 
-.section__contact{
-
-    // height: 100vh;w
+.section__contact {
     top: 10vh;
+    height: 90vh;
+    
     
 
     .reseaux{
@@ -274,6 +310,26 @@
 
 }
 
+.menu{
+    height: fit-content;
+
+    .menu__liste {
+        // z-index: 10;
+        position: fixed;
+        top: 0;
+        // left: 30%;
+        width: 50%;
+
+        .menu__el {
+            // flex-grow: 1;
+            margin-left: 50px;
+            height: 40px;
+            font-size: small;
+        }
+   
+    }
+}
+
   
 
 
@@ -334,6 +390,7 @@
     }
 
 }
+
 
 @media screen and (min-width: 1024px) {
     
@@ -465,9 +522,48 @@
         // top: 35vh;
         // margin-bottom: 60px;
         width: 100w;
+        height: 100vh;
 
 
 
+    }
+    #background-mobile{display: none;}
+
+    .section__myself-bg{
+
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -5vh;
+        margin: 0 auto;
+        object-fit: cover;
+    
+      
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        // .menu__liste {
+        //     z-index: 10;
+        //     position: fixed;
+        //     top: 0;
+        //     left: 30%;
+        //     width: 50%;
+        //     display: flex;
+
+        //     .menu__el {
+              
+        //         padding: 0;
+        //         font-size: xx-small;
+        //         width: 65px;
+        //         display: flex;
+        //         justify-content: center;
+                
+        //     }
+        // }
     }
 
 

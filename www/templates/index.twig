@@ -63,16 +63,23 @@
   <script src="assets/scripts/background.js" defer></script>
 
 </head>
+<header>
+  <nav class="menu">
+    <ul class="menu__liste">
+      <li class="menu__el"><a href="#work">Work</a></li>
+      <li class="menu__el"><a href="?page=internship">About me</a></li>
+      <li class="menu__el"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 <body >
 
   <main>
     
     <section class="section section__acceuil"><div id="bg"></div>
       <div class="acceuil">
-        <h1 class="title">Hello!</h1>
-        <p>I’m Eunice Mutope a web design student</p>
-        <button onclick="window.location.href='?page=internship'">Go to Internship Page</button>
-
+        <h1 class="title">Eunice Mutope</h1>
+        <p>Hello! I’m a web design student</p>
       </div>
     </section>
     {# <div class="section__me"> #}
@@ -166,7 +173,7 @@
 </svg> #}
 
 
-<svg class="section__myself-bg" viewBox="0 0 1078 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg class="section__myself-bg " id="background-desktop" viewBox="0 0 1078 700" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1248_436)">
 
   <g class="icon_friends secondHide">
@@ -256,6 +263,158 @@
 
 </svg>
 
+{# <svg class="section__myself-bg" id="background-mobile" width="393" height="852" viewBox="0 0 393 852" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  
+
+  
+  <g clip-path="url(#clip0_1402_2797)">
+
+
+    
+      <foreignObject x="80" y="480" width="250" height="200" stroke="transparent">
+      <div class="title secondHide--mobile" xmlns="http://www.w3.org/1999/xhtml" >
+        I believe I’m a simple person who enjoys little things to be happy, you give me a good meal,
+        a good drink, and quality time with friends and you find me happy. Like myself in my work,
+        I always try to make things simpler and casual.
+      </div>
+    </foreignObject>
+    <foreignObject x="80" y="480" width="220" height="250" stroke="transparent">
+      <div class="title firstHide" xmlns="http://www.w3.org/1999/xhtml" >
+        I like to help buzzle association on doing some flyers for they children camps, they gives me the opportunity and I start liking doing it.
+      </div>
+    </foreignObject>
+
+    <image id="buzzle" href="assets/images/Logo-Full.png" x="55" y="200" width="100" height="50"/>
+
+    <g class="icon_happy--mobile secondHide--mobile">
+      <path d="M211.557 234C196.335 234 184 246.341 184 261.563C184 276.785 196.335 289.12 211.557 289.12C226.779 289.12 239.12 276.785 239.12 261.563C239.12 246.341 226.779 234 211.557 234ZM194.836 258.006C193.536 257.801 194.002 256.774 194.399 255.999C194.854 255.124 202.319 251.328 206.617 254.78C209.195 256.85 208.676 257.585 207.854 257.842C207.229 258.04 206.542 257.889 206.011 257.503C201.94 254.576 198.336 256.46 196.912 257.463C196.306 257.889 195.571 258.122 194.836 258.006ZM226.424 264.578C211.843 297.262 195.367 264.952 196.562 264.193C196.562 264.193 203.946 267.203 211.446 267.039C217.949 266.905 224.557 264.864 226.202 264.327C226.354 264.275 226.488 264.432 226.424 264.578ZM228.861 258.029C228.237 258.227 227.549 258.075 227.018 257.69C222.947 254.762 219.343 256.646 217.92 257.649C217.313 258.075 216.578 258.308 215.844 258.192C214.543 257.988 215.004 256.961 215.406 256.186C215.861 255.311 223.326 251.514 227.625 254.967C230.202 257.037 229.684 257.772 228.861 258.029Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+    </g>
+
+    <g class="icon_friends--mobile secondHide--mobile">
+      <path d="M26.2922 354.904C26.2922 354.904 16.5038 343.288 26.4907 327.854C27.3742 326.485 28.9063 325.639 30.547 325.639H61.1022C61.1022 325.639 70.6748 321.01 76.1727 321.298C81.6711 321.587 73.2163 330.609 64.3651 333.347C64.1129 333.419 63.8606 333.455 63.6079 333.455H49.2046V385.304C49.2046 385.304 43.6883 388.779 40.4976 385.304V356.633H38.1541L38.1183 384.673C38.1183 384.673 34.2963 390.148 29.3028 384.673L29.3391 336.787H27.4821V354.796C27.4821 354.796 26.9235 356.039 26.2743 354.904H26.2922Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M40.1892 321.46C44.7289 321.46 48.4092 317.784 48.4092 313.248C48.4092 308.713 44.7289 305.036 40.1892 305.036C35.649 305.036 31.9688 308.713 31.9688 313.248C31.9688 317.784 35.649 321.46 40.1892 321.46Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M60.4544 321.425C64.9946 321.425 68.6748 317.748 68.6748 313.212C68.6748 308.677 64.9946 305 60.4544 305C55.9147 305 52.2344 308.677 52.2344 313.212C52.2344 317.748 55.9147 321.425 60.4544 321.425Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M60.0044 356.489V385.232C60.0044 385.232 55.4616 389.77 51.1895 385.232V336.75C51.1895 336.75 65.0879 338.354 72.3707 332.627C73.1462 332.014 74.2635 332.194 74.7863 333.023C76.9134 336.39 80.6991 344.963 73.6506 356.363C73.6506 356.363 73.4342 356.777 72.6771 356.363C71.92 355.949 72.6771 336.732 72.6771 336.732H70.7843V385.286C70.7843 385.286 66.3136 389.662 61.7708 385.286V356.507H60.0044V356.489Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+    </g>
+
+    <g class="icon_food--mobile secondHide--mobile">
+      <path d="M291.79 368.342V357.612C305.648 357.612 300.456 317 300.456 317H276.958C276.958 317 271.75 357.612 285.619 357.612V368.342C282.92 367.791 270.343 376.595 285.619 376.896H291.79C307.056 376.595 294.478 367.791 291.79 368.342ZM288.801 349.83H288.597C288.332 349.83 288.087 349.804 287.837 349.778C284.553 349.411 282.15 346.437 282.15 343.109V326.092H295.264V343.123C295.264 346.45 292.861 349.424 289.571 349.791C289.327 349.817 289.067 349.83 288.801 349.843V349.83Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M309.693 317.459H309.392C307.989 317.459 306.847 318.603 306.847 320.013V335.813C306.847 337.223 307.989 338.367 309.392 338.367H309.693C311.1 338.367 312.238 337.223 312.238 335.813V320.013C312.238 318.603 311.1 317.459 309.693 317.459Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M319.44 317.459H319.139C317.736 317.459 316.594 318.603 316.594 320.013V335.813C316.594 337.223 317.736 338.367 319.139 338.367H319.44C320.848 338.367 321.985 337.223 321.985 335.813V320.013C321.985 318.603 320.848 317.459 319.44 317.459Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M331.289 336.193C331.197 337.293 330.886 338.367 330.386 339.35C330.386 339.35 330.386 339.35 330.386 339.363C329.957 340.293 329.254 341.079 328.443 341.695L323.837 345.245C323.393 345.559 322.949 345.861 322.506 346.162C322.143 346.332 322.271 346.227 321.919 346.529C321.684 346.87 321.516 347.013 321.516 347.354V372.612C321.516 374.237 320.185 375.573 318.568 375.573H318.252C316.635 375.573 315.304 374.237 315.304 372.612V347.354C315.304 346.935 315.396 346.542 315.554 346.188C316.008 344.918 316.87 343.843 317.874 342.992C318.384 342.572 318.905 342.18 319.456 341.826H319.466C319.558 341.734 319.665 341.643 319.767 341.564L326.096 336.69C325.989 336.415 325.938 336.114 325.938 335.813V320.013C325.938 318.612 327.086 317.459 328.483 317.459H328.784C330.182 317.459 331.329 318.612 331.329 320.013V335.656L331.304 336.193H331.289Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+    </g>
+
+
+    <g class="triangles" fill="transparent">
+      <path d="M0.00488281 609.999L0.00488281 492.952H108.503L0.00488281 609.999Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M0.00488281 375.731L0.00488281 492.779H108.503L0.00488281 375.731Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M108.373 492.203L116.657 305.479L199.329 394.345L108.373 492.203Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <g class="triangles">
+        <g fill="green" class="triangleUp">
+          <path d="M108.011 491.8L116.753 300.091L0 375.176L108.011 491.8Z" class="triangle-mobile"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M0.0078125 374.725L116.25 304.899L0.0118396 235.25L0.0078125 374.725Z" class="triangle-mobile"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+        <g fill="red" class="bottomTriangle">  
+          <path d="M200.791 609.186L0.209961 609.231L99.8684 501.715L200.791 609.186Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M201.056 608.859L199.296 394.831L99.4971 502.197L201.056 608.859Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M201.721 609.21L394.816 609.174L300.078 502.323L201.721 609.21Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M201.452 608.884L199.801 394.86L299.793 502.012L201.452 608.884Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M194 609.05L395 609L295.134 731L194 609.05Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M194 609L195.767 852L296 730.1L194 609Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M193 609L6.24339e-06 609.041L94.6907 730L193 609Z" class="triangle-mobile" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M193.349 609L195 852L95 730.34L193.349 609Z" class="triangle-mobile"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+        <g class="bigTriangle--mobile" fill="orange">
+          <path d="M257.237 456.032L395.169 305.459L395.129 455.827L257.237 456.032Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M257.258 456.467L395.089 608.88L395.137 455.806L257.258 456.467Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M256.772 455.46L116.968 305.202L257.38 305.149L256.772 455.46Z"   stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M257.237 153.967L395.169 304.403L395.129 154.173L257.237 153.967Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M257.258 153.532L395.089 1.11886L395.137 154.193L257.258 153.532Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+          <path d="M257.201 154.542L394.891 304.721L257.386 304.874L257.201 154.542Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+            
+          <path d="M256.772 154.538L116.968 304.798L257.38 304.85L256.772 154.538Z" class="triangle-mobile triangleUp" fill="aqua" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+
+          <path d="M257.201 455.456L394.891 305.141L257.386 305.125L257.201 455.456Z" class="triangleUp" fill="blue" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+        <g fill="grey" class="triangle-buzzle">
+        <path d="M108.373 117.797L116.657 304.521L199.329 215.66L108.373 117.797Z"   stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+        <path d="M108.08 118.313L116.259 304.634L0.113281 234.731L108.08 118.313Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+        </g>
+      
+      </g>
+
+    
+      <path d="M0.00488281 -6.28218e-05L0.00488281 117.047H108.503L0.00488281 -6.28218e-05Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M0.00488281 234.268L0.00488281 117.221H108.503L0.00488281 234.268Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M200.791 0.814158L0.209961 0.769866L99.8684 108.285L200.791 0.814158Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M201.056 1.14048L199.413 215.139L99.6133 107.77L201.056 1.14048Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M201.721 0.790083L394.816 0.826313L300.078 107.677L201.721 0.790083Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M201.452 1.11628L199.801 215.139L299.793 107.987L201.452 1.11628Z" fill="#25193A" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M0.5 851.5V609.5L195.5 851.5H0.5Z" fill="#25193A" stroke="black" stroke-width="2"/>
+      <path d="M392.5 851.5V609.5L197.5 851.5H392.5Z" fill="#25193A" stroke="black" stroke-width="2"/>
+    </g>
+    <symbol id="flyers--mobile" class="firstHide " viewBox="-600 1000 1512 982">
+      <image  class="flyers" href="assets/images/flyers_1.png" x="100" y="1000" width="750" height="940"/>
+      <image  class="flyers" href="assets/images/flyers_2.png" x="-600" y="1000" width="750" height="810"/>
+      <image  class="flyers" href="assets/images/flyers_3.png" x="-1200" y="1000" width="750" height="780"/>
+    </symbol>
+
+    <!-- Utiliser le symbol dans le SVG -->
+    <use  href="#flyers--mobile" />
+  </g>
+
+</svg> #}
+
+<svg class="section__myself-bg" id="background-mobile" width="587" height="863" viewBox="0 0 587 863" fill="none" stroke="red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g clip-path="url(#clip0_1433_256)">
+    <rect width="587" height="863" fill="transparent"/>
+    <symbol id="flyers--mobile" class="firstHide " viewBox="-600 1000 1512 982">
+      <image  class="flyers" href="assets/images/flyers_1.png" x="980" y="-50" width="650" height="940"/>
+      <image  class="flyers" href="assets/images/flyers_2.png" x="980" y="1000" width="750" height="810"/>
+      <image  class="flyers" href="assets/images/flyers_3.png" x="980" y="2100" width="750" height="780"/>
+    </symbol>
+    <!-- Utiliser le symbol dans le SVG -->
+    <use  href="#flyers--mobile" />
+
+    <image id="hideFinal" class="firstHide" href="assets/images/Logo-Full.png" x="400" y="470" width="100" height="50"/>
+
+    <g class="icon_food--mobile secondHide--mobile" id="hideFinal">
+      <path d="M524.79 603.342V592.612C538.648 592.612 533.456 552 533.456 552H509.958C509.958 552 504.75 592.612 518.619 592.612V603.342C515.92 602.791 503.343 611.595 518.619 611.896H524.79C540.056 611.595 527.478 602.791 524.79 603.342ZM521.801 584.83H521.597C521.332 584.83 521.087 584.804 520.837 584.778C517.553 584.411 515.15 581.437 515.15 578.109V561.092H528.264V578.123C528.264 581.45 525.861 584.424 522.571 584.791C522.327 584.817 522.067 584.83 521.801 584.843V584.83Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M542.693 552.458H542.392C540.989 552.458 539.847 553.603 539.847 555.013V570.813C539.847 572.223 540.989 573.367 542.392 573.367H542.693C544.1 573.367 545.238 572.223 545.238 570.813V555.013C545.238 553.603 544.1 552.458 542.693 552.458Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M552.44 552.458H552.139C550.736 552.458 549.594 553.603 549.594 555.013V570.813C549.594 572.223 550.736 573.367 552.139 573.367H552.44C553.848 573.367 554.985 572.223 554.985 570.813V555.013C554.985 553.603 553.848 552.458 552.44 552.458Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+      <path d="M564.289 571.193C564.197 572.293 563.886 573.367 563.386 574.35C563.386 574.35 563.386 574.35 563.386 574.363C562.957 575.293 562.254 576.079 561.443 576.695L556.837 580.245C556.393 580.559 555.949 580.861 555.506 581.162C555.143 581.332 555.271 581.227 554.919 581.529C554.684 581.869 554.516 582.013 554.516 582.354V607.612C554.516 609.237 553.185 610.573 551.568 610.573H551.252C549.635 610.573 548.304 609.237 548.304 607.612V582.354C548.304 581.935 548.396 581.542 548.554 581.188C549.008 579.918 549.87 578.843 550.874 577.992C551.384 577.572 551.905 577.18 552.456 576.826H552.466C552.558 576.734 552.665 576.642 552.767 576.564L559.096 571.69C558.989 571.415 558.938 571.114 558.938 570.813V555.013C558.938 553.612 560.086 552.458 561.483 552.458H561.784C563.182 552.458 564.329 553.612 564.329 555.013V570.656L564.304 571.193H564.289Z" fill="#A27DEB" stroke="black" stroke-miterlimit="10"/>
+    </g>
+    <g class="icon_happy--mobile secondHide--mobile" id="hideFinal">
+      <path d="M536.557 101C521.335 101 509 113.341 509 128.563C509 143.785 521.335 156.12 536.557 156.12C551.779 156.12 564.12 143.785 564.12 128.563C564.12 113.341 551.779 101 536.557 101ZM519.836 125.006C518.536 124.801 519.002 123.774 519.399 122.999C519.854 122.124 527.319 118.328 531.617 121.78C534.195 123.85 533.676 124.585 532.854 124.842C532.229 125.04 531.542 124.889 531.011 124.503C526.94 121.576 523.336 123.46 521.912 124.463C521.306 124.889 520.571 125.122 519.836 125.006ZM551.424 131.578C536.843 164.262 520.367 131.952 521.562 131.193C521.562 131.193 528.946 134.203 536.446 134.039C542.949 133.905 549.557 131.864 551.202 131.327C551.354 131.275 551.488 131.432 551.424 131.578ZM553.861 125.029C553.237 125.227 552.549 125.075 552.018 124.69C547.947 121.762 544.343 123.646 542.92 124.649C542.313 125.075 541.578 125.308 540.844 125.192C539.543 124.988 540.004 123.961 540.406 123.186C540.861 122.311 548.326 118.514 552.625 121.967C555.202 124.037 554.684 124.772 553.861 125.029Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+    </g>
+
+    <g class="icon_friends--mobile secondHide--mobile" id="hideFinal">
+      <path d="M422.292 374.904C422.292 374.904 412.504 363.288 422.491 347.854C423.374 346.485 424.906 345.639 426.547 345.639H457.102C457.102 345.639 466.675 341.01 472.173 341.298C477.671 341.587 469.216 350.609 460.365 353.347C460.113 353.419 459.861 353.455 459.608 353.455H445.205V405.304C445.205 405.304 439.688 408.779 436.498 405.304V376.633H434.154L434.118 404.673C434.118 404.673 430.296 410.148 425.303 404.673L425.339 356.787H423.482V374.796C423.482 374.796 422.923 376.039 422.274 374.904H422.292Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M436.189 341.46C440.729 341.46 444.409 337.784 444.409 333.248C444.409 328.713 440.729 325.036 436.189 325.036C431.649 325.036 427.969 328.713 427.969 333.248C427.969 337.784 431.649 341.46 436.189 341.46Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M456.454 341.425C460.995 341.425 464.675 337.748 464.675 333.212C464.675 328.677 460.995 325 456.454 325C451.915 325 448.234 328.677 448.234 333.212C448.234 337.748 451.915 341.425 456.454 341.425Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+      <path d="M456.004 376.489V405.232C456.004 405.232 451.462 409.77 447.189 405.232V356.75C447.189 356.75 461.088 358.354 468.371 352.627C469.146 352.014 470.263 352.194 470.786 353.022C472.913 356.39 476.699 364.963 469.651 376.363C469.651 376.363 469.434 376.777 468.677 376.363C467.92 375.949 468.677 356.732 468.677 356.732H466.784V405.286C466.784 405.286 462.314 409.662 457.771 405.286V376.507H456.004V376.489Z" fill="#A27DEB" stroke="black" stroke-width="0.5" stroke-miterlimit="10"/>
+    </g>
+
+    <g class="triangles bigTriangle" fill="transparent">
+      <path d="M393 647L589 433L588.943 646.708L393 647Z"  class="triangledown" fill="red" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <path d="M393 647.936L588.931 864L589 647L393 647.936Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <path d="M393 646L589 433.023L393.264 433L393 646Z"fill="red" class="triangleBuzzle" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <path d="M392.138 646L194 433.074L393 433L392.138 646Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M393 218L589 432L588.943 218.292L393 218Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <path d="M393 218.059L588.931 0.999999L589 219L393 218.059Z" class="triangleUp"fill="red" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      
+      <path d="M393 219L589 432.782L393.264 433L393 219Z" class="triangLeft" fill="red" stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+      <path d="M392.138 219L194 432.925L393 433L392.138 219Z"  stroke="#050B26" stroke-width="2" stroke-miterlimit="10"/>
+    </g>
+  </g>
+
+</svg>
+
 
 
  
@@ -264,13 +423,14 @@
 
 </div>
 <div class="pin"></div>
+<div class="pin2"></div>
 
 
     <section class="section section__myself">
-     <h2 class="title">Who am I ?</h2>
+     <h2 class="title">About me</h2>
       
-     {# <p class="intro title hide">I belive  I’m a simple person who enjoy little  things to be happy, you give me a good meal, a good drink and a quality time with friends you find me happy. Like myself in my work I always try to make things simplier and casual.</p> #}
-
+     <p class="intro title  secondHide--mobile">I belive  I’m a simple person who enjoy little  things to be happy, you give me a good meal, a good drink and a quality time with friends you find me happy. Like myself in my work I always try to make things simplier and casual.</p>
+    <p class="intro title firstHide">I like to help buzzle association on doing some flyers for they children camps, they gives me the opportunity and I start liking doing it.</p>
     </section> 
     {# </div> #}
      <div id="bgautre2"></div>
@@ -302,8 +462,8 @@
           <path class="triangle triangle-24" d="M378.96 1.09003V328.09H1.33984L189.46 164.75L190.01 164.29L378.96 1.09003Z" fill="#FF0000" stroke="#002BFF" stroke-miterlimit="10"/>
         </g>
       </svg> #}
-    <section class="section section__works">
-      <div class="masque"><h2 class="title" id="title">Works</h2></div>
+    <section class="section section__works"id="work">
+      <div class="masque"><h2 class="title" id="title" >Works</h2></div>
         
       <div class="slider-container ">
 
@@ -353,10 +513,13 @@
                   {% for image in item.images %}
                     {% if loop.index == 2 and key == "Rux" %}
                       <img src="{{ image }}" alt="{{ item.title }}" class="second-image">
+                      <p class="description" style="position: absolute;">{{ item.description }}</p>
+                    {% elseif loop.index == 1 and key == "Rux" %}
+                      <img src="{{ image }}" alt="{{ item.title }}" class="first-image">
                     {% else %}
                       <img src="{{ image }}" alt="{{ item.title }}">
+                      <p class="description">{{ item.description }}</p>
                     {% endif %}
-                    <p class="description">{{ item.description }}</p>
                   {% endfor %}
                   {# <h3 class="title title--popup" style="display: none;">{{ item.title }}</h3> #}
                   {# <p class="description" style="display: none;">{{ item.description }}</p> #}
@@ -468,7 +631,7 @@
 
 
 
-    <section class="section section__contact">
+    <section class="section section__contact" id="contact">
     
       <h2 class="title">Contact</h2>
       <ul class="reseaux">

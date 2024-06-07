@@ -37,36 +37,221 @@ if (mediaQueryMobile.matches) {
     });
 }
 
+
+ScrollTrigger.create({
+    trigger: "#bg3", // élément à pinner
+    start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+    end: "+=300%", // fin du pinning après 300vh
+    pin: true, // active le pinning
+    // pinSpacing: true, // active l'ajout de l'espace de pinning
+   
+});
+
+const mediaQueryAllMobile = window.matchMedia('(max-width: 1023px)')
+// Check if the media query is true
+if (mediaQueryAllMobile.matches) {
+
+  ScrollTrigger.create({
+    trigger: ".section__myself", // élément à pinner
+    start: "top top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+    end: "+=150%", // fin du pinning après 300vh
+    pin: true, // active le pinning
+    // pinSpacing: true, // active l'ajout de l'espace de pinning
+    
+});
+
+
+    // gsap.to(".bottomTriangle", {
+    //     scrollTrigger: {
+    //     trigger: "#bg3",
+    //     start: "top top",
+    //     end: "bottom top",
+    //     scrub: true,
+    //     toggleActions: "play reverse play reverse",
+       
+    //     },
+    //     // opacity: 0,
+    //     y:700,
+    //     ease: "none",
+    //     onComplete: () => {
+    //         gsap.to(".bottomTriangle", {
+    //             y:0,
+    //             ease: "none",
+    //         });
+    //     }
+    // });
+    scrollAnimationMobile1(".triangLeft", 0,400);
+    scrollAnimationMobile1(".triangledown", 400,0);
+    var hide = gsap.timeline();
+    var hideFlyers = gsap.timeline();
+    hideFlyers.to(".firstHide",{opacity:0});
+    hide.from(".secondHide--mobile",{opacity:0});
+    
+    
+    gsap.to(".triangleUp", {
+        scrollTrigger: {
+            trigger: "#bg3",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            toggleActions: "play reverse play reverse",
+            onEnter: () => hide.play(),
+            onLeave: () => hide.reverse(),
+            onEnterBack: () => hide.play(),
+            onLeaveBack: () => hide.reverse(),
+            onEnter: () => hideFlyers.play(),
+            onLeave: () => hideFlyers.reverse(),
+            onEnterBack: () => hideFlyers.play(),
+            onLeaveBack: () => hideFlyers.reverse(),
+            
+        },
+        y: -300,
+        ease: "none",
+        
+        onComplete: () => {
+            gsap.to(".triangleUp", {
+                y: 0,
+                ease: "none",
+                onComplete: () => {
+                    // hide.reverse();
+                    // scrollAnimationMobile2(".bottomTriangle", 400,0,".pin","top top");
+                    scrollAnimationMobile2(".triangleBuzzle", 0,400,".pin","top top");
+                    // scrollAnimationMobile2(".triangLeft", 0,400,".pin","top top");
+                    // scrollAnimationMobile2(".flyers", 0,-2500,".pin","center top");
+                }
+            });
+        }
+    });
+
+    function scrollAnimationMobile2(selector, yValue, xValue, pin, starting) {
+      gsap.to(selector, {
+          scrollTrigger: {
+              trigger: pin,
+              start: starting,
+              end: "bottom top",
+              scrub: true,
+              toggleActions: "play reverse play reverse",
+              
+          },
+          y: yValue,
+          x: xValue,
+          // scale: selector.includes('.flyers') ? 2 : 1, // Appliquer l'échelle uniquement aux flyers
+          ease: "none",
+          onComplete: () => {
+            
+            
+              gsap.to(selector, {                
+                
+                // onEnter: () => hide.play(),
+                // onLeave: () => hide.reverse(),
+                // onEnterBack: () => hide.play(),
+                // onLeaveBack: () => hide.reverse(),
+                toggleActions: "play reverse play reverse",
+                  y: 0,
+                  x: 0,
+                 
+                  scale: 1, // Réinitialiser l'échelle à 1 pour tous les éléments
+                  ease: "none",
+                  
+              });
+              // gsap.to("#hideFinal",{x: 900,})
+              gsap.to(".bigTriangle, #hideFinal", {
+                toggleActions: "play reverse play reverse",
+                scrollTrigger: {
+                      trigger: ".pin2",
+                      start: "top top",
+                      end: "bottom top",
+                      scrub: true,
+                      // toggleActions: "play reverse play reverse",
+                },
+                // onEnter: () => hide.play(),
+                // onLeave: () => hide.reverse(),
+                // onEnterBack: () => hide.play(),
+                // onLeaveBack: () => hide.reverse(),
+                x: 900,
+                ease: "none",
+                opacity:1,
+
+                onComplete: () => {
+                  gsap.to(".bigTriangle, #hideFinal,.section__myself p", {
+                      y: 0,
+                      x: 0,
+                      scale: 1, // Réinitialiser l'échelle à 1 pour tous les éléments
+                      ease: "none",
+                      opacity:0,
+                  });
+                  // gsap.to("#hideFinal",{x: 0,})
+                }
+                
+              });
+
+            gsap.to(".flyers", {
+              y: 0,
+              x: -3000,
+              scale: 2,
+              scrollTrigger: {
+                trigger: ".pin2",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                toggleActions: "play reverse play reverse",
+              },
+
+              
+            });
+            
+          }
+      });
+  }
+  function scrollAnimationMobile1(selector, yValue, xValue,) {
+    gsap.to(selector, {
+        scrollTrigger: {
+          trigger: "#bg3",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          toggleActions: "play reverse play reverse",
+        },
+        y: yValue,
+        x: xValue,
+        ease: "none",
+        onComplete: () => {
+            gsap.to(selector, {
+              y: 0,
+              x: 0,
+              ease: "none",
+            });
+          
+        }
+    });
+}
+  
+    
+
+}
+
 const mediaQueryDesktop = window.matchMedia('(min-width: 1024px)')
 // Check if the media query is true
 if (mediaQueryDesktop.matches) {
    
-
+  ScrollTrigger.create({
+    trigger: ".section__myself", // élément à pinner
+    start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
+    end: "+=200%", // fin du pinning après 300vh
+    pin: true, // active le pinning
+    // pinSpacing: true, // active l'ajout de l'espace de pinning
     
-    // // ScrollTrigger pour pinner .section__works
+  });
+  ScrollTrigger.create({
+      trigger: ".section__works", // élément déclencheur
+      start: "top top", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
+      end: "+=15%", // fin du pinning après 100vh
+      pin: true, // élément à pinner
+  });
+    
+    
 
-    ScrollTrigger.create({
-        trigger: ".section__myself", // élément à pinner
-        start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
-        end: "+=200%", // fin du pinning après 300vh
-        pin: true, // active le pinning
-        // pinSpacing: true, // active l'ajout de l'espace de pinning
-        
-    });
-    ScrollTrigger.create({
-        trigger: "#bg3", // élément à pinner
-        start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
-        end: "+=300%", // fin du pinning après 300vh
-        pin: true, // active le pinning
-        // pinSpacing: true, // active l'ajout de l'espace de pinning
-       
-    });
-    ScrollTrigger.create({
-        trigger: ".section__works", // élément déclencheur
-        start: "top top", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
-        end: "+=15%", // fin du pinning après 100vh
-        pin: true, // élément à pinner
-    });
+   
     
 
     // ScrollTrigger.create({

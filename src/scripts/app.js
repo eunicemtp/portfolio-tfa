@@ -56,30 +56,11 @@ if (mediaQueryAllMobile.matches) {
     start: "top top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
     end: "+=150%", // fin du pinning après 300vh
     pin: true, // active le pinning
-    // pinSpacing: true, // active l'ajout de l'espace de pinning
+
     
 });
 
 
-    // gsap.to(".bottomTriangle", {
-    //     scrollTrigger: {
-    //     trigger: "#bg3",
-    //     start: "top top",
-    //     end: "bottom top",
-    //     scrub: true,
-    //     toggleActions: "play reverse play reverse",
-       
-    //     },
-    //     // opacity: 0,
-    //     y:700,
-    //     ease: "none",
-    //     onComplete: () => {
-    //         gsap.to(".bottomTriangle", {
-    //             y:0,
-    //             ease: "none",
-    //         });
-    //     }
-    // });
     scrollAnimationMobile1(".triangLeft", 0,400);
     scrollAnimationMobile1(".triangledown", 400,0);
     var hide = gsap.timeline();
@@ -113,11 +94,9 @@ if (mediaQueryAllMobile.matches) {
                 y: 0,
                 ease: "none",
                 onComplete: () => {
-                    // hide.reverse();
-                    // scrollAnimationMobile2(".bottomTriangle", 400,0,".pin","top top");
+                    
                     scrollAnimationMobile2(".triangleBuzzle", 0,400,".pin","top top");
-                    // scrollAnimationMobile2(".triangLeft", 0,400,".pin","top top");
-                    // scrollAnimationMobile2(".flyers", 0,-2500,".pin","center top");
+                    
                 }
             });
         }
@@ -135,17 +114,14 @@ if (mediaQueryAllMobile.matches) {
           },
           y: yValue,
           x: xValue,
-          // scale: selector.includes('.flyers') ? 2 : 1, // Appliquer l'échelle uniquement aux flyers
+          
           ease: "none",
           onComplete: () => {
             
             
               gsap.to(selector, {                
                 
-                // onEnter: () => hide.play(),
-                // onLeave: () => hide.reverse(),
-                // onEnterBack: () => hide.play(),
-                // onLeaveBack: () => hide.reverse(),
+                
                 toggleActions: "play reverse play reverse",
                   y: 0,
                   x: 0,
@@ -154,33 +130,30 @@ if (mediaQueryAllMobile.matches) {
                   ease: "none",
                   
               });
-              // gsap.to("#hideFinal",{x: 900,})
-              gsap.to(".bigTriangle, #hideFinal", {
+              
+              gsap.to(".bigTriangle, .hideFinal", {
                 toggleActions: "play reverse play reverse",
                 scrollTrigger: {
                       trigger: ".pin2",
                       start: "top top",
                       end: "bottom top",
                       scrub: true,
-                      // toggleActions: "play reverse play reverse",
+                      
                 },
-                // onEnter: () => hide.play(),
-                // onLeave: () => hide.reverse(),
-                // onEnterBack: () => hide.play(),
-                // onLeaveBack: () => hide.reverse(),
+               
                 x: 900,
                 ease: "none",
                 opacity:1,
 
                 onComplete: () => {
-                  gsap.to(".bigTriangle, #hideFinal,.section__myself p", {
+                  gsap.to(".bigTriangle, .hideFinal,.section__myself p", {
                       y: 0,
                       x: 0,
                       scale: 1, // Réinitialiser l'échelle à 1 pour tous les éléments
                       ease: "none",
                       opacity:0,
                   });
-                  // gsap.to("#hideFinal",{x: 0,})
+                  
                 }
                 
               });
@@ -239,7 +212,7 @@ if (mediaQueryDesktop.matches) {
     start: "top", // déclencheur lorsque le top de section__myself-bg atteint le top de la fenêtre
     end: "+=200%", // fin du pinning après 300vh
     pin: true, // active le pinning
-    // pinSpacing: true, // active l'ajout de l'espace de pinning
+    
     
   });
   ScrollTrigger.create({
@@ -249,19 +222,6 @@ if (mediaQueryDesktop.matches) {
       pin: true, // élément à pinner
   });
     
-    
-
-   
-    
-
-    // ScrollTrigger.create({
-    //     trigger: "#bgautre", // élément déclencheur
-    //     start: "top 105vh;", // déclencheur lorsque le top de .section__works atteint le top de la fenêtre
-    //     end: "+=15%", // fin du pinning après 100vh
-    //     pin: true, // élément à pinner
-    //     markers: true // active les marqueurs pour le debugging
-    // });
-
     gsap.to(".bigTriangle", {
         scrollTrigger: {
         trigger: "#bg3",
@@ -271,7 +231,7 @@ if (mediaQueryDesktop.matches) {
         toggleActions: "play reverse play reverse",
        
         },
-        // opacity: 0,
+        
         y:700,
         ease: "none",
         onComplete: () => {
@@ -339,102 +299,11 @@ if (mediaQueryDesktop.matches) {
         });
     }
         
-        
-    
-    
-
-    // gsap.to(".triangleLeft", {
-    //     scrollTrigger: {
-    //     trigger: "#bg3",
-    //     start: "top top",
-    //     // end: "bottom top",
-    //     scrub: true,
-    //     markers: true, // Pour le débogage, vous pouvez les supprimer après
-    //     },
-    //     // opacity: 0,
-    //     x:-100,
-    //     ease: "none",
-    //     onComplete: () => {
-    //         gsap.to(".triangleLeft", {
-    //             y:0,
-    //             ease: "none",
-    //         });
-    //     }
-    // });
-    // gsap.to(".triangleRight", {
-    //     scrollTrigger: {
-    //     trigger: "#bg3",
-    //     start: "top top",
-    //     // end: "left right",
-    //     scrub: true,
-    //     markers: true, // Pour le débogage, vous pouvez les supprimer après
-    //     },
-    //     // opacity: 0,
-    //     x:100,
-    //     ease: "none",
-    //     duration:0.5,
-    //     onComplete: () => {
-    //         gsap.to(".triangleRight", {
-    //             y:0,
-    //             ease: "none",
-    //         });
-    //     }
-    // });
+   
 
 }
 
 
-
-
-
-
-
-
-// document.addEventListener("scroll", function() {
-
-//     var slider = document.querySelector(".slider");
-//     var masque = document.querySelector(".masque");
-
-//     var masqueRect = masque.getBoundingClientRect();
-//     var sliderRect = slider.getBoundingClientRect();
-//     // var textRect = text.getBoundingClientRect();
-
-//     if (
-//         sliderRect.bottom > masqueRect.top &&
-//         sliderRect.top < masqueRect.bottom
-//         ) {
-//             slider.style.position = 'sticky';
-//             // slider.style.top = '0';
-//         // gsap.to(slider, { opacity: 0, duration: 0.2,y:90 });
-//         } 
-//         else {
-//         // gsap.to(slider, { opacity: 1, duration: 0.3,y:0 });
-//         slider.style.position = 'sticky';
-//         }
-
-
-// });
-
-// var popup = document.querySelector(".popup");
-// popup.addEventListener("scroll",function(){
-
-//   var title = document.querySelector(".popup__title");
-//   var text = document.querySelector(".popup__info");
-//   var titleRect = title.getBoundingClientRect();
-//   var textRect = text.getBoundingClientRect();
-
-//   if (
-//     textRect.bottom > titleRect.top &&
-//     textRect.top < titleRect.bottom
-//     ) {
-//     gsap.to(text, { opacity: 0, duration: 0.2,y:90 });
-//     } 
-//     else {
-//     gsap.to(text, { opacity: 1, duration: 0.3,y:0 });
-//     }
-
-
-// })
 $(function() {
 
 
@@ -493,152 +362,6 @@ $(function() {
 });
 
 
-//////////////////
-/// DRAG SLIDER///
-/////////////////
-
-
-// const slider = document.querySelector('.slider');
-// const slides = gsap.utils.toArray('.slide');
-// let currentSlide = 0;
-
-// const updateSlidePosition = (slideIndex) => {
-//     gsap.to(slider, {
-//         x: -slideIndex * window.innerWidth,
-//         duration: 0.5,
-//         ease: 'power3.out'
-//     });
-// };
-
-// Draggable.create(slider, {
-//     type: 'x',
-//     // bounds: { minX: -((slides.length - 1) * window.innerWidth), maxX: 0 },
-//     edgeResistance: 0.65,
-//     inertia: true,
-//     dragResistance: 0.3,
-//     /*onDragEnd: function() {
-//         // const slideWidth = window.innerWidth;
-//         const slideWidth = slides.length;
-//         const totalWidth = slideWidth * (slides.length - 1);
-//         let newSlideIndex = Math.round(-this.x / slideWidth);
-
-//         newSlideIndex = Math.max(0, Math.min(newSlideIndex, slides.length - 2));
-//         currentSlide = newSlideIndex;
-
-//         updateSlidePosition(currentSlide);
-//     }*/
-// });
-
-// window.addEventListener('resize', () => {
-//     Draggable.get(slider).applyBounds({
-//         minX: -((slides.length - 1) * window.innerWidth),
-//         maxX: 0
-//     });
-//     updateSlidePosition(currentSlide);
-// });
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     // Initialize the GSAP draggable slider
-//     let slider = document.querySelector('.slider');
-//     let isDragging = false;
-//     let startPosX = 0;
-//     let currentTranslate = 0;
-//     let dragInstance = null;
-
-//     slider.addEventListener('touchstart', handleTouchStart);
-//     slider.addEventListener('touchmove', handleTouchMove);
-//     slider.addEventListener('touchend', handleTouchEnd);
-
-//     function handleTouchStart(event) {
-//         const touch = event.touches[0];
-//         isDragging = true;
-//         startPosX = touch.clientX;
-//         currentTranslate = getPositionX(slider);
-        
-//         // Kill any existing animation
-//         if (dragInstance) {
-//             dragInstance.kill();
-//             dragInstance = null;
-//         }
-//     }
-
-//     function handleTouchMove(event) {
-//         if (!isDragging) return;
-//         const touch = event.touches[0];
-//         const currentPositionX = touch.clientX;
-//         const diffX = currentPositionX - startPosX;
-//         const newTranslate = currentTranslate + diffX;
-        
-//         // Update the slider position
-//         slider.style.transform = `translateX(${newTranslate}px)`;
-//     }
-
-//     function handleTouchEnd() {
-//         isDragging = false;
-        
-//         // Animate the slider position with GSAP
-//         dragInstance = gsap.to(slider, {
-//             x: "-=200",
-//             duration: 0.5,
-//             ease: "power2.out",
-//             onComplete: () => {
-//                 // Reset the drag instance
-//                 dragInstance = null;
-//             }
-//         });
-//     }
-
-//     function getPositionX(element) {
-//         const style = window.getComputedStyle(element);
-//         const matrix = new DOMMatrixReadOnly(style.transform);
-//         return matrix.m41;
-//     }
-// });
-
-
-// const slider = document.querySelector('.popup__slider');
-// const slides = gsap.utils.toArray('.popup__slider__el');
-// let currentSlide = 0;
-
-// const updateSlidePosition = (slideIndex) => {
-//     gsap.to(slider, {
-//         x: -slideIndex * window.innerWidth,
-//         duration: 0.5,
-//         ease: 'power3.out'
-//     });
-// };
-
-// Draggable.create(slider, {
-//     type: 'x',
-//     bounds: { minX: -((slides.length - 1) * window.innerWidth), maxX: 0 },
-//     // edgeResistance: 0.65,
-//     inertia: true,
-//     // dragResistance: 0.3,
-//     onDragEnd: function() {
-//         // const slideWidth = window.innerWidth;
-//         // const totalWidth = slideWidth * (slides.length - 1);
-//         // let newSlideIndex = Math.round(-this.x / slideWidth);
-
-//         // newSlideIndex = Math.max(0, Math.min(newSlideIndex, slides.length - 2));
-//         // currentSlide = newSlideIndex;
-
-//         // updateSlidePosition(currentSlide);
-//     }
-// });
-
-// window.addEventListener('resize', () => {
-//     Draggable.get(slider).applyBounds({
-//         minX: -((slides.length - 1) * window.innerWidth),
-//         maxX: 0
-//     });
-//     updateSlidePosition(currentSlide);
-// });
-
-
-
-
 
 /////////////////////
 /// PROJECT SLIDER///
@@ -673,22 +396,6 @@ const gradients = [
     });
     // maskNextSlide();
   }
-  
-//   function animateSVG(elements) {
-//     gsap.killTweensOf(elements);
-//     gsap.fromTo(elements, 
-//       {
-//         opacity: 0,
-//         y: -20,
-//       }, 
-//       {
-//         opacity: 1,
-//         y: 0,
-//         duration: 1,
-//         stagger: 0.1,
-//         ease: "power2.out",
-//       });
-//   }
   
 function changeColors(elements, color) {
     elements.forEach(element => {
@@ -807,3 +514,45 @@ function changeColors(elements, color) {
   
   setupTimeout();
   
+
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+
+  const observerOptions = {
+      root: null, // Use the viewport as the root
+      rootMargin: '0px',
+      threshold: 0.5 // 50% of the section needs to be visible
+  };
+
+  const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              navLinks.forEach(link => {
+                  link.classList.remove('active');
+                  if (link.getAttribute('href') === `#${id}`) {
+                      link.classList.add('active');
+                  }
+              });
+          }
+      });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+  sections.forEach(section => observer.observe(section));
+
+  navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+          navLinks.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+      });
+  });
+
+  // Check current URL to set active state on load
+  const currentURL = window.location.href;
+  navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if (currentURL.includes(linkHref)) {
+          link.classList.add('active');
+      }
+  });

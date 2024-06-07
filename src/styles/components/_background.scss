@@ -1,0 +1,103 @@
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+}
+
+
+
+$x_gradient: ( #311547, #220334 );
+
+$default_color_1: nth($x_gradient, 1);
+$default_color_2: nth($x_gradient, 2);
+
+#bg{
+  background: radial-gradient(ellipse at center, $default_color_1 0%, darken($default_color_2, 5%) 100%);
+}
+
+
+
+
+
+.popup-open {
+  overflow: hidden;
+  // position: fixed;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+
+#bg3 .triangles path {
+
+  fill: #220334;
+  stroke:#220334;
+  stroke-width: 3px;
+  
+}
+
+#bg3{ 
+  position: absolute;
+
+  top: 100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+ 
+  
+}
+@media screen and (max-width: 1023px) {#bgautre{display: none;}}
+@media screen and (min-width: 1024px) {
+
+  #bgautre{
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 80vw;
+    height: 75vh;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: -10;
+
+    
+  
+  }
+
+  #bgautre2{
+    position: absolute;
+    margin-top: -25vh;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    background: #220334;
+
+  }
+
+ 
+
+
+
+
+  $gradients: ( 
+    ( #311547, #220334 ), // gradient-bg-2
+    ( #912823, #590400 ), // gradient-bg-1
+    ( #2F4C82, #0E0F1B ), // gradient-bg-3
+    ( #93c47d, #6aa84f )  // gradient-bg-4
+  );
+
+  @for $i from 1 through length($gradients) {
+    $color_1: nth(nth($gradients, $i), 1);
+    $color_2: nth(nth($gradients, $i), 2);
+
+    .gradient-bg-#{$i} {
+      
+      background: radial-gradient(ellipse at center, $color_1 0%, darken($color_2, 5%) 100%);
+    }
+  }
+
+}
